@@ -20,7 +20,7 @@ public class FoolAIPlayer extends AbstractPlayer{
             永远在对手左上方左上方放置棋子，否则随机放置
          */
         ChessBoard.Coordinate coordinate = counterpartyLastMove.Subtract(new ChessBoard.Coordinate(1, 1));
-        while(!board.IsEmptyAt(coordinate)){
+        while(!board.IsAbleToPlace(coordinate)){
             int newRaw=new Random().nextInt(board.GetSize());
             int newCol=new Random().nextInt(board.GetSize());
             coordinate = new ChessBoard.Coordinate(newRaw, newCol);

@@ -58,14 +58,11 @@ public class ChessBoard {
      */
     public boolean PlacePiece(@NotNull Coordinate coordinate,ChessPiece piece) {
         int row=coordinate.row;
-        int col=coordinate.column;
-        if (row < 0 || row >= size || col < 0 || col >= size) {
+        int column=coordinate.column;
+        if(!IsAbleToPlace(coordinate)){
             return false;
         }
-        if (board[row][col] != ChessPiece.EMPTY && piece != ChessPiece.EMPTY) {
-            return false;
-        }
-        board[row][col] = piece;
+        board[row][column] = piece;
         return true;
     }
 
@@ -77,8 +74,17 @@ public class ChessBoard {
         return board[coordinate.row][coordinate.column];
     }
 
-    public boolean IsEmptyAt(@NotNull Coordinate coordinate) {
+    public boolean IsEmptyAt(@NotNull Coordinate coordinate) throws IllegalArgumentException {
+        if (coordinate.row < 0 || coordinate.row >= size || coordinate.column < 0 || coordinate.column >= size) {
+            throw new IllegalArgumentException("coordinate is out of range");
+        }
         return board[coordinate.row][coordinate.column] == ChessPiece.EMPTY;
+    }
+
+    public boolean IsAbleToPlace(@NotNull Coordinate coordinate) {
+        return coordinate.row >= 0 && coordinate.row < size &&
+                coordinate.column >= 0 && coordinate.column < size &&
+                IsEmptyAt(coordinate);
     }
 
 }
