@@ -1,5 +1,7 @@
 package core;
 
+import org.jetbrains.annotations.NotNull;
+
 public class ChessBoard {
     public static class Coordinate{
         int row;
@@ -9,8 +11,16 @@ public class ChessBoard {
             this.column = column;
         }
 
-        public boolean equals(Coordinate c){
+        public boolean equals(@NotNull Coordinate c){
             return this.row == c.row && this.column == c.column;
+        }
+
+        public @NotNull Coordinate Add(@NotNull Coordinate other){
+            return new Coordinate(this.row + other.row, this.column + other.column);
+        }
+
+        public @NotNull Coordinate Subtract(@NotNull Coordinate other){
+            return new Coordinate(this.row - other.row, this.column - other.column);
         }
     }
     private int size;
@@ -33,6 +43,10 @@ public class ChessBoard {
         }
     }
 
+    public int GetSize(){
+        return size;
+    }
+
     public void Resize(int size) {
         this.size = size;
         board = new ChessPiece[size][size];
@@ -42,7 +56,7 @@ public class ChessBoard {
         false:failed to place the piece
         true:success to place the piece
      */
-    public boolean PlacePiece(Coordinate coordinate, ChessPiece piece) {
+    public boolean PlacePiece(@NotNull Coordinate coordinate,ChessPiece piece) {
         int row=coordinate.row;
         int col=coordinate.column;
         if (row < 0 || row >= size || col < 0 || col >= size) {
@@ -55,8 +69,16 @@ public class ChessBoard {
         return true;
     }
 
-    public void SetPiece(int row, int col, ChessPiece piece) {
-        board[row][col] = piece;
+    public void SetPiece(@NotNull Coordinate coordinate, ChessPiece piece) {
+        board[coordinate.row][coordinate.column] = piece;
+    }
+
+    public ChessPiece GetPiece(@NotNull Coordinate coordinate) {
+        return board[coordinate.row][coordinate.column];
+    }
+
+    public boolean IsEmptyAt(@NotNull Coordinate coordinate) {
+        return board[coordinate.row][coordinate.column] == ChessPiece.EMPTY;
     }
 
 }
