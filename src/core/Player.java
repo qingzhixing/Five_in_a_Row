@@ -1,6 +1,7 @@
 package core;
 
 public abstract class Player {
+
     public String name;
 
     Player(String name) {

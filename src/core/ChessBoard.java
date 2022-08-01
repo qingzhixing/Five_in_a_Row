@@ -1,6 +1,18 @@
 package core;
 
 public class ChessBoard {
+    public static class Coordinate{
+        int row;
+        int column;
+        public Coordinate(int row, int column){
+            this.row = row;
+            this.column = column;
+        }
+
+        public boolean equals(Coordinate c){
+            return this.row == c.row && this.column == c.column;
+        }
+    }
     private int size;
     private ChessPiece[][] board;
 
@@ -30,7 +42,9 @@ public class ChessBoard {
         false:failed to place the piece
         true:success to place the piece
      */
-    public boolean PlacePiece(int row, int col, ChessPiece piece) {
+    public boolean PlacePiece(Coordinate coordinate, ChessPiece piece) {
+        int row=coordinate.row;
+        int col=coordinate.column;
         if (row < 0 || row >= size || col < 0 || col >= size) {
             return false;
         }
