@@ -59,7 +59,7 @@ public class ChessBoard {
     public boolean PlacePiece(@NotNull Coordinate coordinate,ChessPiece piece) {
         int row=coordinate.row;
         int column=coordinate.column;
-        if(!IsAbleToPlace(coordinate)){
+        if(IsNotAbleToPlace(coordinate)){
             return false;
         }
         board[row][column] = piece;
@@ -70,21 +70,26 @@ public class ChessBoard {
         board[coordinate.row][coordinate.column] = piece;
     }
 
-    public ChessPiece GetPiece(@NotNull Coordinate coordinate) {
+    public ChessPiece GetPiece(@NotNull Coordinate coordinate)throws IllegalArgumentException {
+        if(IsNotAbleToQuery(coordinate)){
+            throw new IllegalArgumentException("The coordinate is not valid");
+        }
         return board[coordinate.row][coordinate.column];
     }
 
     public boolean IsEmptyAt(@NotNull Coordinate coordinate) throws IllegalArgumentException {
-        if (coordinate.row < 0 || coordinate.row >= size || coordinate.column < 0 || coordinate.column >= size) {
+        if (IsNotAbleToQuery(coordinate)) {
             throw new IllegalArgumentException("coordinate is out of range");
         }
         return board[coordinate.row][coordinate.column] == ChessPiece.EMPTY;
     }
 
-    public boolean IsAbleToPlace(@NotNull Coordinate coordinate) {
-        return coordinate.row >= 0 && coordinate.row < size &&
-                coordinate.column >= 0 && coordinate.column < size &&
-                IsEmptyAt(coordinate);
+    public boolean IsNotAbleToQuery(@NotNull Coordinate coordinate){
+        return coordinate.row < 0 || coordinate.row >= size || coordinate.column < 0 || coordinate.column >= size;
+    }
+
+    public boolean IsNotAbleToPlace(@NotNull Coordinate coordinate) {
+        return IsNotAbleToQuery(coordinate)|| !IsEmptyAt(coordinate);
     }
 
 }

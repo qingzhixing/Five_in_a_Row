@@ -5,12 +5,12 @@ public abstract class AbstractPlayer {
 
     public String name;
 
-    AbstractPlayer(String name, ChessPiece ownPiece) {
+    protected AbstractPlayer(String name, ChessPiece ownPiece) {
         this.name = name;
         this.ownPiece = ownPiece;
     }
 
-    AbstractPlayer(ChessPiece ownPiece) {
+    protected AbstractPlayer(ChessPiece ownPiece) {
         this("Unnamed core.Player", ownPiece);
     }
 
