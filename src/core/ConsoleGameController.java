@@ -39,9 +39,15 @@ public class ConsoleGameController extends AbstractGameController{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to restart?(y/n)");
         if(scanner.hasNext()){
-            isAbleToRestart= scanner.next().equals("y");
+            String input = scanner.next();
+            isAbleToRestart= input.equals("y");
         }
-        scanner.close();
+
         return isAbleToRestart;
+    }
+
+    @Override
+    protected void OnGameEnd(){
+        System.out.println("----OnGameEnd----");
     }
 }

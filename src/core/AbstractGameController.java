@@ -3,7 +3,6 @@ package core;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractGameController {
-    protected GameControllerListener listener= new GameControllerListener();
     protected final ChessBoard chessBoard;
     protected AbstractPlayer blackPlayer;
     protected AbstractPlayer whitePlayer;
@@ -31,8 +30,9 @@ public abstract class AbstractGameController {
     }
 
     public void Start(){
+        OnGameStart();
         do{
-            listener.OnGameStart();
+            OnRoundStart();
 
             ChessBoard.Coordinate lastMove = null;
             ChessPiece winner = ChessPiece.EMPTY;
@@ -41,25 +41,38 @@ public abstract class AbstractGameController {
                 if(chessBoard.IsFull())break;
                 lastMove = blackPlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.BLACK);
-                listener.OnMove(ChessPiece.BLACK, lastMove);
+                OnMove(ChessPiece.BLACK, lastMove);
                 DisplayBoard();
                 winner = GetWinner(lastMove);
 
                 if(chessBoard.IsFull())break;
                 lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.WHITE);
-                listener.OnMove(ChessPiece.WHITE, lastMove);
+                OnMove(ChessPiece.WHITE, lastMove);
                 DisplayBoard();
                 winner = GetWinner(lastMove);
             }
-            listener.OnGameEnd(winner);
+            OnRoundEnd(winner);
             DisplayWinner(winner);
         }while(IsAbleToRestart());
+        OnGameEnd();
     }
 
-    public final void SetListener(@NotNull GameControllerListener listener){
-        this.listener = listener;
+    protected void OnGameEnd() {
     }
+
+    protected void OnGameStart() {
+    }
+
+    protected void OnRoundStart() {
+    }
+
+    protected void OnRoundEnd(ChessPiece winner) {
+    }
+
+    protected void OnMove(ChessPiece black, ChessBoard.Coordinate lastMove) {
+    }
+
 
     protected abstract void DisplayBoard();
 
@@ -97,8 +110,10 @@ public abstract class AbstractGameController {
                 }else{
                     break;
                 }
+
+                System.out.println("Success,Count: " + count);
             }
-            if(count==5){
+            if(count>=5){
                 return latestPiece;
             }
         }
