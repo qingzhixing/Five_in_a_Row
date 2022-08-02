@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="back up">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="add something and delete something">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessPiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/ConsoleGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ConsoleGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/GameControllerListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659438627585</updated>
-      <workItem from="1659438629213" duration="7062000" />
+      <workItem from="1659438629213" duration="10762000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -80,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659444202957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add something and delete something">
+      <created>1659446046257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659446046257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ConsoleGameController" />
     <MESSAGE value="back up" />
-    <option name="LAST_COMMIT_MESSAGE" value="back up" />
+    <MESSAGE value="add something and delete something" />
+    <option name="LAST_COMMIT_MESSAGE" value="add something and delete something" />
   </component>
 </project>

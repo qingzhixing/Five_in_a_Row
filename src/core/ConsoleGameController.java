@@ -3,6 +3,7 @@ package core;
 import java.util.Scanner;
 
 public class ConsoleGameController extends AbstractGameController{
+
     public ConsoleGameController(int boardSize,AbstractPlayer blackPlayer,AbstractPlayer whitePlayer){
         super(boardSize,blackPlayer,whitePlayer);
     }
@@ -44,6 +45,11 @@ public class ConsoleGameController extends AbstractGameController{
         }
 
         return isAbleToRestart;
+    }
+
+    @Override
+    protected void OnMove(ChessPiece player, ChessBoard.Coordinate coordinate) {
+//        new Scanner(System.in).nextLine();
     }
 
     @Override

@@ -22,7 +22,7 @@ public abstract class AbstractGameController {
     }
 
     protected AbstractGameController(int boardSize){
-        this(boardSize,new FoolAIPlayer(ChessPiece.BLACK),new FoolAIPlayer(ChessPiece.WHITE));
+        this(boardSize,new RandomAIPlayer(ChessPiece.BLACK), new RandomAIPlayer(ChessPiece.WHITE));
     }
 
     public final ChessBoard GetChessBoard(){
@@ -32,6 +32,9 @@ public abstract class AbstractGameController {
     public void Start(){
         OnGameStart();
         do{
+            //init
+            chessBoard.Clear();
+
             OnRoundStart();
 
             ChessBoard.Coordinate lastMove = null;
@@ -41,16 +44,16 @@ public abstract class AbstractGameController {
                 if(chessBoard.IsFull())break;
                 lastMove = blackPlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.BLACK);
-                OnMove(ChessPiece.BLACK, lastMove);
                 DisplayBoard();
                 winner = GetWinner(lastMove);
+                OnMove(ChessPiece.BLACK, lastMove);
 
                 if(chessBoard.IsFull())break;
                 lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.WHITE);
-                OnMove(ChessPiece.WHITE, lastMove);
                 DisplayBoard();
                 winner = GetWinner(lastMove);
+                OnMove(ChessPiece.WHITE, lastMove);
             }
             OnRoundEnd(winner);
             DisplayWinner(winner);
@@ -88,33 +91,44 @@ public abstract class AbstractGameController {
 
         ChessPiece latestPiece = chessBoard.GetPiece(latestCoordinate);
         //search for 5 in a row by latestCoordinate
-        int[] dx ={-1,-1,-1,0,1,1,1,0};
-        int[] dy ={-1,0,1,1,1,0,-1,-1};
-        for(int direction=0;direction<8;direction++){
-            int count=0;
-            ChessBoard.Coordinate delta = new ChessBoard.Coordinate(dx[direction],dy[direction]);
-            ChessBoard.Coordinate backupCoordinate = latestCoordinate;
-
-            System.out.println("delta: " + delta);
-
-            count++;
-            while(!chessBoard.IsNotAbleToQuery(backupCoordinate)&&count<5){
-                ChessPiece backupPiece = chessBoard.GetPiece(backupCoordinate);
-
-                System.out.println("checking coordinate: " + backupCoordinate);
-                System.out.println("backupPiece: " + backupPiece.toDetailString());
-
-                if(backupPiece!=ChessPiece.EMPTY&& backupPiece==latestPiece){
-                    backupCoordinate = backupCoordinate.Add(delta);
-                    count++;
+        int[] dx ={-1,-1,0,1};
+        int[] dy ={0,1,1,1};
+        for(int road=0;road<4;road++){
+            System.out.println("road: " + road);
+            int count=1;
+            for(int direction=1;direction<=2;direction++){
+                System.out.println("direction: " + direction);
+                ChessBoard.Coordinate delta;
+                //calculate delta by the direction of the road
+                if(direction==1) {
+                    delta = new ChessBoard.Coordinate(dx[road], dy[road]);
                 }else{
-                    break;
+                    delta = new ChessBoard.Coordinate(-dx[road], -dy[road]);
                 }
+                ChessBoard.Coordinate backupCoordinate = latestCoordinate;
 
-                System.out.println("Success,Count: " + count);
-            }
-            if(count>=5){
-                return latestPiece;
+                System.out.println("delta: " + delta);
+
+                backupCoordinate = backupCoordinate.Add(delta);
+                while(!chessBoard.IsNotAbleToQuery(backupCoordinate)&&count<5){
+                    ChessPiece backupPiece = chessBoard.GetPiece(backupCoordinate);
+
+                    System.out.println("checking coordinate: " + backupCoordinate);
+                    System.out.println("backupPiece: " + backupPiece.toDetailString());
+
+                    if(backupPiece!=ChessPiece.EMPTY&& backupPiece==latestPiece){
+                        count++;
+                        backupCoordinate = backupCoordinate.Add(delta);
+                    }else{
+                        break;
+                    }
+
+                    System.out.println("Success");
+                }
+                System.out.println("count: " + count);
+                if(count>=5){
+                    return latestPiece;
+                }
             }
         }
         return ChessPiece.EMPTY;

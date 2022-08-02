@@ -1,8 +1,8 @@
 package core;
 
 public enum ChessPiece {
-    WHITE("︎︎g"),
-    BLACK("c"),
+    WHITE("︎︎k"),
+    BLACK("a"),
     EMPTY("o");
 
     private String styleOnConsole = "";
