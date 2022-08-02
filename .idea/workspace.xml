@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7302246d-be67-4ac4-b294-419bb4df8c9c" name="变更" comment="bug fixed">
-      <change afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
+    <list default="true" id="7302246d-be67-4ac4-b294-419bb4df8c9c" name="变更" comment="Add AbstractGameController">
+      <change afterPath="$PROJECT_DIR$/src/test/ChessBoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Five in a Row.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Five in a Row.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessPiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/FoolAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/FoolAIPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,24 +39,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/qingzhixing/Documents/Project/Git/Five_in_a_Row&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/qingzhixing/Documents/Project/Git/Five_in_a_Row",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="应用程序.ChessBoardTest">
+    <configuration name="ChessBoardTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChessBoardTest" />
+      <module name="Five in a Row" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SwingStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="starter.SwingStarter" />
       <module name="Five in a Row" />
@@ -62,6 +74,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.ChessBoardTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1659371852807</updated>
       <workItem from="1659371857744" duration="3684000" />
-      <workItem from="1659382094984" duration="2999000" />
+      <workItem from="1659382094984" duration="3087000" />
+      <workItem from="1659418857147" duration="2984000" />
     </task>
     <task id="LOCAL-00001" summary="优化代码，添加项目配置文件">
       <created>1659373437029</created>
@@ -102,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659382936059</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add AbstractGameController">
+      <created>1659385128685</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659385128685</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +148,7 @@
     <MESSAGE value="优化代码，添加项目配置文件" />
     <MESSAGE value="Optimized Code.&#10;Add FoolAIPlayer" />
     <MESSAGE value="bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
+    <MESSAGE value="Add AbstractGameController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add AbstractGameController" />
   </component>
 </project>

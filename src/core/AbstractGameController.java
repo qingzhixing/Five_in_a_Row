@@ -3,9 +3,9 @@ package core;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractGameController {
-    private final ChessBoard chessBoard;
-    private final AbstractPlayer blackPlayer;
-    private final AbstractPlayer whitePlayer;
+    protected final ChessBoard chessBoard;
+    protected final AbstractPlayer blackPlayer;
+    protected final AbstractPlayer whitePlayer;
 
     protected AbstractGameController(int boardSize,AbstractPlayer blackPlayer,AbstractPlayer whitePlayer){
         chessBoard = new ChessBoard(boardSize);
