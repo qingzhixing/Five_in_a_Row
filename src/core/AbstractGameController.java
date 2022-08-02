@@ -4,8 +4,8 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractGameController {
     protected final ChessBoard chessBoard;
-    protected final AbstractPlayer blackPlayer;
-    protected final AbstractPlayer whitePlayer;
+    protected AbstractPlayer blackPlayer;
+    protected AbstractPlayer whitePlayer;
 
     protected AbstractGameController(int boardSize,AbstractPlayer blackPlayer,AbstractPlayer whitePlayer){
         chessBoard = new ChessBoard(boardSize);
@@ -17,7 +17,31 @@ public abstract class AbstractGameController {
         this(15,new FoolAIPlayer(ChessPiece.BLACK),new FoolAIPlayer(ChessPiece.WHITE));
     }
 
-    public abstract void Start();
+    protected AbstractGameController(ChessBoard board){
+        this.chessBoard = board;
+    }
+
+    public final ChessBoard GetChessBoard(){
+        return chessBoard;
+    }
+
+    public final void Start(){
+        ChessBoard.Coordinate lastMove = null;
+        ChessPiece winner=ChessPiece.EMPTY;
+        while(winner==ChessPiece.EMPTY){
+            lastMove = blackPlayer.MoveIn(chessBoard,lastMove);
+            DisplayBoard();
+            winner = GetWinner(lastMove);
+            lastMove = whitePlayer.MoveIn(chessBoard,lastMove);
+            DisplayBoard();
+            winner = GetWinner(lastMove);
+        }
+        DisplayWinner(winner);
+    }
+
+    protected abstract void DisplayBoard();
+
+    protected abstract void DisplayWinner(ChessPiece winner);
 
     //TODO:Check whether the algorithm is correct
     public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate){
