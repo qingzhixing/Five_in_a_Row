@@ -2,7 +2,19 @@ package core;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Random;
+
 public class ChessBoard {
+    public Coordinate GetRandomCoordinate() {
+        Coordinate coordinate = new Coordinate(-1, -1);
+        while(IsNotAbleToQuery(coordinate)){
+            int nextRaw = new Random().nextInt(size);
+            int nextColumn = new Random().nextInt(size);
+            coordinate = new Coordinate(nextRaw, nextColumn);
+        }
+        return coordinate;
+    }
+
     public static class Coordinate{
         int row;
         int column;
@@ -22,8 +34,14 @@ public class ChessBoard {
         public @NotNull Coordinate Subtract(@NotNull Coordinate other){
             return new Coordinate(this.row - other.row, this.column - other.column);
         }
+
+        @Override
+        public String toString(){
+            return "(" + row + "," + column + ")";
+        }
     }
     private int size;
+    private int colorChessAmount;
     private ChessPiece[][] board;
 
     public ChessBoard(int size) {
@@ -42,6 +60,7 @@ public class ChessBoard {
                 board[i][j] = ChessPiece.EMPTY;
             }
         }
+        colorChessAmount = 0;
     }
 
     public int GetSize(){
@@ -51,6 +70,7 @@ public class ChessBoard {
     public void Resize(int size) {
         this.size = size;
         board = new ChessPiece[size][size];
+        Clear();
     }
 
     /*
@@ -58,16 +78,21 @@ public class ChessBoard {
         true:success to place the piece
      */
     public boolean PlacePiece(@NotNull Coordinate coordinate,@NotNull ChessPiece piece) {
-        int row=coordinate.row;
-        int column=coordinate.column;
         if(IsNotAbleToPlaceAnyPiece(coordinate)){
             return false;
         }
-        board[row][column] = piece;
+        SetPiece(coordinate, piece);
         return true;
     }
 
     public void SetPiece(@NotNull Coordinate coordinate,@NotNull ChessPiece piece) {
+        System.out.print("SetPiece,colorChessAmount turn from "+colorChessAmount);
+        if(board[coordinate.row][coordinate.column] == ChessPiece.EMPTY){
+            colorChessAmount += ((piece == ChessPiece.EMPTY)? 0 : 1);
+        }else{
+            colorChessAmount += ((piece == ChessPiece.EMPTY)? -1 : 0);
+        }
+        System.out.println(" to "+colorChessAmount);
         board[coordinate.row][coordinate.column] = piece;
     }
 
@@ -93,10 +118,14 @@ public class ChessBoard {
         return IsNotAbleToQuery(coordinate)|| !IsEmptyAt(coordinate);
     }
 
+    public boolean IsFull(){
+        return colorChessAmount >= size * size;
+    }
+
     public void DebugPrintOnConsole(){
         for(int i=0;i<size;i++){
             for(int j=0;j<size;j++){
-                System.out.print(board[i][j].toString()+' ');
+                System.out.print(board[i][j].toString());
             }
             System.out.println();
         }

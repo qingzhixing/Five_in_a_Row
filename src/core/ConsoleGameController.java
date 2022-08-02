@@ -13,6 +13,10 @@ public class ConsoleGameController extends AbstractGameController{
         super(board);
     }
 
+    public ConsoleGameController(int boardSize){
+        super(boardSize);
+    }
+
     @Override
     protected void DisplayBoard() {
         System.out.println("----display board----");
@@ -22,7 +26,11 @@ public class ConsoleGameController extends AbstractGameController{
     @Override
     protected void DisplayWinner(ChessPiece winner) {
         System.out.println("----display winner----");
-        System.out.println("Winner is " + winner);
+        if(winner == ChessPiece.EMPTY){
+            System.out.println("There's no winner");
+        }else{
+            System.out.println("Winner is " + winner.name());
+        }
     }
 
     @Override

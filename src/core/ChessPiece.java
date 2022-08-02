@@ -1,9 +1,9 @@
 package core;
 
 public enum ChessPiece {
-    WHITE("︎︎O"),
-    BLACK("G"),
-    EMPTY("^");
+    WHITE("︎︎g"),
+    BLACK("c"),
+    EMPTY("o");
 
     private String styleOnConsole = "";
 
@@ -11,8 +11,13 @@ public enum ChessPiece {
         this.styleOnConsole = styleOnConsole;
     }
 
+    @Override
     public String toString() {
         return styleOnConsole;
+    }
+
+    public String toDetailString(){
+        return "["+this.name()+", "+styleOnConsole+"]";
     }
 
     public static ChessPiece RandomPiece() {
