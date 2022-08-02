@@ -3,6 +3,7 @@ package core;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractGameController {
+    protected GameControllerListener listener= new GameControllerListener();
     protected final ChessBoard chessBoard;
     protected AbstractPlayer blackPlayer;
     protected AbstractPlayer whitePlayer;
@@ -25,23 +26,39 @@ public abstract class AbstractGameController {
         return chessBoard;
     }
 
-    public final void Start(){
-        ChessBoard.Coordinate lastMove = null;
-        ChessPiece winner=ChessPiece.EMPTY;
-        while(winner==ChessPiece.EMPTY){
-            lastMove = blackPlayer.MoveIn(chessBoard,lastMove);
-            DisplayBoard();
-            winner = GetWinner(lastMove);
-            lastMove = whitePlayer.MoveIn(chessBoard,lastMove);
-            DisplayBoard();
-            winner = GetWinner(lastMove);
-        }
-        DisplayWinner(winner);
+    public void Start(){
+        do{
+            listener.OnGameStart();
+
+            ChessBoard.Coordinate lastMove = null;
+            ChessPiece winner = ChessPiece.EMPTY;
+            while (winner == ChessPiece.EMPTY) {
+
+                lastMove = blackPlayer.MoveIn(chessBoard, lastMove);
+                listener.OnMove(ChessPiece.BLACK, lastMove);
+                DisplayBoard();
+                winner = GetWinner(lastMove);
+
+                lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
+                listener.OnMove(ChessPiece.WHITE, lastMove);
+                DisplayBoard();
+                winner = GetWinner(lastMove);
+
+            }
+            listener.OnGameEnd(winner);
+            DisplayWinner(winner);
+        }while(IsAbleToRestart());
+    }
+
+    public final void SetListener(@NotNull GameControllerListener listener){
+        this.listener = listener;
     }
 
     protected abstract void DisplayBoard();
 
     protected abstract void DisplayWinner(ChessPiece winner);
+
+    protected abstract boolean IsAbleToRestart();
 
     //TODO:Check whether the algorithm is correct
     public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate){

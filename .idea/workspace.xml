@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7302246d-be67-4ac4-b294-419bb4df8c9c" name="变更" comment="Add Test">
-      <change afterPath="$PROJECT_DIR$/src/test/GameControllerGetWinnerTest.java" afterDir="false" />
+    <list default="true" id="7302246d-be67-4ac4-b294-419bb4df8c9c" name="变更" comment="Change interface of AbstractGameController">
+      <change afterPath="$PROJECT_DIR$/src/core/ConsoleGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/GameControllerListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/GameControllerGetWinnerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +91,7 @@
       <updated>1659371852807</updated>
       <workItem from="1659371857744" duration="3684000" />
       <workItem from="1659382094984" duration="3087000" />
-      <workItem from="1659418857147" duration="4499000" />
+      <workItem from="1659418857147" duration="8306000" />
     </task>
     <task id="LOCAL-00001" summary="优化代码，添加项目配置文件">
       <created>1659373437029</created>
@@ -130,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659421865716</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change interface of AbstractGameController">
+      <created>1659423588085</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659423588085</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +165,7 @@
     <MESSAGE value="bug fixed" />
     <MESSAGE value="Add AbstractGameController" />
     <MESSAGE value="Add Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test" />
+    <MESSAGE value="Change interface of AbstractGameController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change interface of AbstractGameController" />
   </component>
 </project>
