@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="add something and delete something">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="找到总是白棋赢的问题点所在">
+      <change afterPath="$PROJECT_DIR$/src/swing/SwingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ConsoleGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ConsoleGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/SwingStarter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="应用程序.SwingStarter">
     <configuration name="ConsoleStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="starter.ConsoleStarter" />
       <module name="Five in a Row" />
@@ -57,6 +56,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SwingStarter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="starter.SwingStarter" />
+      <module name="Five in a Row" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.ConsoleStarter" />
+      <item itemvalue="应用程序.SwingStarter" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +76,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659438627585</updated>
-      <workItem from="1659438629213" duration="10762000" />
+      <workItem from="1659438629213" duration="11446000" />
+      <workItem from="1659458623473" duration="361000" />
+      <workItem from="1659599985584" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -89,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659446046257</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="找到总是白棋赢的问题点所在">
+      <created>1659451508353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659451508353</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +129,7 @@
     <MESSAGE value="ConsoleGameController" />
     <MESSAGE value="back up" />
     <MESSAGE value="add something and delete something" />
-    <option name="LAST_COMMIT_MESSAGE" value="add something and delete something" />
+    <MESSAGE value="找到总是白棋赢的问题点所在" />
+    <option name="LAST_COMMIT_MESSAGE" value="找到总是白棋赢的问题点所在" />
   </component>
 </project>
