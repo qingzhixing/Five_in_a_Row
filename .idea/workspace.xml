@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="找到总是白棋赢的问题点所在">
-      <change afterPath="$PROJECT_DIR$/src/swing/SwingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" afterDir="false" />
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="Add Swing Interfaces">
+      <change afterPath="$PROJECT_DIR$/src/swing/GameFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swing/assets/chess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/GameFrameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/starter/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/SwingStarter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +47,22 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="应用程序.SwingStarter">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/swing" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.GameFrameTest">
     <configuration name="ConsoleStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="starter.ConsoleStarter" />
+      <module name="Five in a Row" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameFrameTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="GameFrameTest" />
       <module name="Five in a Row" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -64,6 +76,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="应用程序.GameFrameTest" />
       <item itemvalue="应用程序.ConsoleStarter" />
       <item itemvalue="应用程序.SwingStarter" />
     </list>
@@ -78,7 +91,8 @@
       <updated>1659438627585</updated>
       <workItem from="1659438629213" duration="11446000" />
       <workItem from="1659458623473" duration="361000" />
-      <workItem from="1659599985584" duration="747000" />
+      <workItem from="1659599985584" duration="1375000" />
+      <workItem from="1659607529479" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -108,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659451508353</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Swing Interfaces">
+      <created>1659600751767</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659600751767</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +151,7 @@
     <MESSAGE value="back up" />
     <MESSAGE value="add something and delete something" />
     <MESSAGE value="找到总是白棋赢的问题点所在" />
-    <option name="LAST_COMMIT_MESSAGE" value="找到总是白棋赢的问题点所在" />
+    <MESSAGE value="Add Swing Interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Swing Interfaces" />
   </component>
 </project>
