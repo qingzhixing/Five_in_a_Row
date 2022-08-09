@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public class GameComponent extends JComponent {
-    static int pieceRadius=2;
+    static int pieceRadius=8;
 
     int gridSideLength;
 
@@ -44,8 +44,8 @@ public class GameComponent extends JComponent {
     }
 
     private void DrawPiece(Graphics2D g2d, ChessPiece piece, int i, int j) {
-        int leftTopX = padding + i * gridSideLength-pieceRadius;
-        int leftTopY = padding + j * gridSideLength-pieceRadius;
+        double leftTopX = padding + i * gridSideLength-pieceRadius-0.5*gridSideLength;
+        double leftTopY = padding + j * gridSideLength-pieceRadius-0.5*gridSideLength;
         Ellipse2D.Double circle = new Ellipse2D.Double(leftTopX, leftTopY, 2 * pieceRadius,2 * pieceRadius);
         Color color;
         if (piece == ChessPiece.BLACK) {

@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 
 public class SwingGameController extends AbstractGameController {
-    static int gridSideLength=10;
+    static int gridSideLength=20;
 
     static int padding=10;
 
@@ -38,23 +38,24 @@ public class SwingGameController extends AbstractGameController {
         SwingController.frame.repaint();
     }
 
-    private void ShowGameOverDialog(@NotNull String message){
-        JOptionPane.showMessageDialog(null,message,"Game Over",JOptionPane.INFORMATION_MESSAGE);
-    }
-
     @Override
     protected void DisplayWinner(@NotNull ChessPiece winner) {
         if(winner==ChessPiece.EMPTY){
-            ShowGameOverDialog("There is no winner!");
+            JOptionPane.showMessageDialog(null,"There is no winner","No winner",JOptionPane.INFORMATION_MESSAGE);
         }else{
-            ShowGameOverDialog("Congratulations! "+winner.name()+" is the winner!");
+            JOptionPane.showMessageDialog(null,winner.name()+" is the winner","Winner",JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
     @Override
     protected boolean IsAbleToRestart() {
-        return false;
+        int option = JOptionPane.showConfirmDialog(null,"Do you want to restart?","Restart",JOptionPane.YES_NO_OPTION);
+        return option==JOptionPane.YES_OPTION;
     }
 
+    @Override
+    protected void OnMove(@NotNull ChessPiece player, ChessBoard.@NotNull Coordinate lastMove) {
+        JOptionPane.showMessageDialog(null,"Player "+player.name()+" moved to "+lastMove.toString(),"Debug Message",JOptionPane.INFORMATION_MESSAGE);
+    }
 
 }

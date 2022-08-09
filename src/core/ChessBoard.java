@@ -46,7 +46,7 @@ public class ChessBoard {
 
     public ChessBoard(int size) {
         this.size = size;
-        board = new ChessPiece[size][size];
+        board = new ChessPiece[size+10][size+10];
         Clear();
     }
 
@@ -55,8 +55,8 @@ public class ChessBoard {
     }
 
     public void Clear() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
                 board[i][j] = ChessPiece.EMPTY;
             }
         }
@@ -69,7 +69,7 @@ public class ChessBoard {
 
     public void Resize(int size) {
         this.size = size;
-        board = new ChessPiece[size][size];
+        board = new ChessPiece[size+10][size+10];
         Clear();
     }
 
@@ -111,7 +111,7 @@ public class ChessBoard {
     }
 
     public boolean IsNotAbleToQuery(@NotNull Coordinate coordinate){
-        return coordinate.row < 0 || coordinate.row >= size || coordinate.column < 0 || coordinate.column >= size;
+        return coordinate.row <= 0 || coordinate.row > size || coordinate.column <= 0 || coordinate.column > size;
     }
 
     public boolean IsNotAbleToPlaceAnyPiece(@NotNull Coordinate coordinate) {
@@ -123,8 +123,8 @@ public class ChessBoard {
     }
 
     public void DebugPrintOnConsole(){
-        for(int i=0;i<size;i++){
-            for(int j=0;j<size;j++){
+        for(int i=1;i<=size;i++){
+            for(int j=1;j<=size;j++){
                 System.out.print(board[i][j].toString()+'_');
             }
             System.out.println();

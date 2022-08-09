@@ -131,6 +131,7 @@ public abstract class AbstractGameController {
                     return latestPiece;
                 }
             }
+            System.out.println();
         }
         return ChessPiece.EMPTY;
     }
