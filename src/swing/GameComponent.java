@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public class GameComponent extends JComponent {
-    static int pieceRadius=8;
+    static int pieceRadius = 8;
 
     int gridSideLength;
 
@@ -17,7 +17,7 @@ public class GameComponent extends JComponent {
 
     ChessBoard board;
 
-    public GameComponent(int gridSideLength, int padding,@NotNull ChessBoard board) {
+    public GameComponent(int gridSideLength, int padding, @NotNull ChessBoard board) {
         this.gridSideLength = gridSideLength;
         this.padding = padding;
         this.board = board;
@@ -33,8 +33,8 @@ public class GameComponent extends JComponent {
 
     private void DrawPieces(Graphics2D g2d) {
         int boardSize = board.GetSize();
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
+        for (int i = 1; i <= boardSize; i++) {
+            for (int j = 1; j <= boardSize; j++) {
                 ChessPiece piece = board.GetPiece(new ChessBoard.Coordinate(i, j));
                 if (piece != ChessPiece.EMPTY) {
                     DrawPiece(g2d, piece, i, j);
@@ -44,9 +44,9 @@ public class GameComponent extends JComponent {
     }
 
     private void DrawPiece(Graphics2D g2d, ChessPiece piece, int i, int j) {
-        double leftTopX = padding + i * gridSideLength-pieceRadius-0.5*gridSideLength;
-        double leftTopY = padding + j * gridSideLength-pieceRadius-0.5*gridSideLength;
-        Ellipse2D.Double circle = new Ellipse2D.Double(leftTopX, leftTopY, 2 * pieceRadius,2 * pieceRadius);
+        double leftTopX = padding + i * gridSideLength - pieceRadius - 0.5 * gridSideLength;
+        double leftTopY = padding + j * gridSideLength - pieceRadius - 0.5 * gridSideLength;
+        Ellipse2D.Double circle = new Ellipse2D.Double(leftTopX, leftTopY, 2 * pieceRadius, 2 * pieceRadius);
         Color color;
         if (piece == ChessPiece.BLACK) {
             color = Color.BLACK;
@@ -61,12 +61,12 @@ public class GameComponent extends JComponent {
         g2d.setColor(Color.MAGENTA);
         int boardSize = board.GetSize();
         //horizontal lines
-        for(int currentY=padding;currentY<=boardSize*gridSideLength+padding;currentY+=gridSideLength){
-            g2d.drawLine(padding,currentY,boardSize*gridSideLength+padding,currentY);
+        for (int currentY = padding; currentY <= boardSize * gridSideLength + padding; currentY += gridSideLength) {
+            g2d.drawLine(padding, currentY, boardSize * gridSideLength + padding, currentY);
         }
         //vertical lines
-        for(int currentX=padding;currentX<=boardSize*gridSideLength+padding;currentX+=gridSideLength){
-            g2d.drawLine(currentX,padding,currentX,boardSize*gridSideLength+padding);
+        for (int currentX = padding; currentX <= boardSize * gridSideLength + padding; currentX += gridSideLength) {
+            g2d.drawLine(currentX, padding, currentX, boardSize * gridSideLength + padding);
         }
     }
 

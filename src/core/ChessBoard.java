@@ -98,14 +98,14 @@ public class ChessBoard {
 
     public ChessPiece GetPiece(@NotNull Coordinate coordinate)throws IllegalArgumentException {
         if(IsNotAbleToQuery(coordinate)){
-            throw new IllegalArgumentException("The coordinate is not valid");
+            throw new IllegalArgumentException("The coordinate "+coordinate+" is not valid");
         }
         return board[coordinate.row][coordinate.column];
     }
 
     public boolean IsEmptyAt(@NotNull Coordinate coordinate) throws IllegalArgumentException {
         if (IsNotAbleToQuery(coordinate)) {
-            throw new IllegalArgumentException("coordinate is out of range");
+            throw new IllegalArgumentException("coordinate "+coordinate+" is out of range");
         }
         return board[coordinate.row][coordinate.column] == ChessPiece.EMPTY;
     }

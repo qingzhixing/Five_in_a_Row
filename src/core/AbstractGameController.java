@@ -7,32 +7,32 @@ public abstract class AbstractGameController {
     protected AbstractPlayer blackPlayer;
     protected AbstractPlayer whitePlayer;
 
-    protected AbstractGameController(int boardSize,AbstractPlayer blackPlayer,AbstractPlayer whitePlayer){
+    protected AbstractGameController(int boardSize, AbstractPlayer blackPlayer, AbstractPlayer whitePlayer) {
         chessBoard = new ChessBoard(boardSize);
         this.blackPlayer = blackPlayer;
         this.whitePlayer = whitePlayer;
     }
 
-    protected AbstractGameController(){
+    protected AbstractGameController() {
         this(15);
     }
 
-    protected AbstractGameController(ChessBoard board){
+    protected AbstractGameController(ChessBoard board) {
         this.chessBoard = board;
     }
 
-    protected AbstractGameController(int boardSize){
-        this(boardSize,new RandomAIPlayer(ChessPiece.BLACK), new RandomAIPlayer(ChessPiece.WHITE));
+    protected AbstractGameController(int boardSize) {
+        this(boardSize, new RandomAIPlayer(ChessPiece.BLACK), new RandomAIPlayer(ChessPiece.WHITE));
     }
 
-    public final ChessBoard GetChessBoard(){
+    public final ChessBoard GetChessBoard() {
         return chessBoard;
     }
 
-    public void Start(){
+    public void Start() {
         OnGameStart();
         DisplayBoard();
-        do{
+        do {
             //init
             chessBoard.Clear();
 
@@ -42,14 +42,14 @@ public abstract class AbstractGameController {
             ChessPiece winner = ChessPiece.EMPTY;
             while (winner == ChessPiece.EMPTY) {
 
-                if(chessBoard.IsFull())break;
+                if (chessBoard.IsFull()) break;
                 lastMove = blackPlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.BLACK);
                 DisplayBoard();
                 winner = GetWinner(lastMove);
                 OnMove(ChessPiece.BLACK, lastMove);
 
-                if(chessBoard.IsFull())break;
+                if (chessBoard.IsFull()) break;
                 lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.WHITE);
                 DisplayBoard();
@@ -58,7 +58,7 @@ public abstract class AbstractGameController {
             }
             OnRoundEnd(winner);
             DisplayWinner(winner);
-        }while(IsAbleToRestart());
+        } while (IsAbleToRestart());
         OnGameEnd();
     }
 
@@ -74,7 +74,7 @@ public abstract class AbstractGameController {
     protected void OnRoundEnd(@NotNull ChessPiece winner) {
     }
 
-    protected void OnMove(@NotNull ChessPiece black,@NotNull ChessBoard.Coordinate lastMove) {
+    protected void OnMove(@NotNull ChessPiece black, @NotNull ChessBoard.Coordinate lastMove) {
     }
 
 
@@ -85,25 +85,25 @@ public abstract class AbstractGameController {
     protected abstract boolean IsAbleToRestart();
 
     //TODO:Check whether the algorithm is correct
-    public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate){
+    public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate) {
         System.out.println("----debug get winner----");
         System.out.println("latestCoordinate: " + latestCoordinate);
-        System.out.println("lastPiece:"+chessBoard.GetPiece(latestCoordinate).toDetailString());
+        System.out.println("lastPiece:" + chessBoard.GetPiece(latestCoordinate).toDetailString());
 
         ChessPiece latestPiece = chessBoard.GetPiece(latestCoordinate);
         //search for 5 in a row by latestCoordinate
-        int[] dx ={-1,-1,0,1};
-        int[] dy ={0,1,1,1};
-        for(int road=0;road<4;road++){
+        int[] dx = {-1, -1, 0, 1};
+        int[] dy = {0, 1, 1, 1};
+        for (int road = 0; road < 4; road++) {
             System.out.println("road: " + road);
-            int count=1;
-            for(int direction=1;direction<=2;direction++){
+            int count = 1;
+            for (int direction = 1; direction <= 2; direction++) {
                 System.out.println("direction: " + direction);
                 ChessBoard.Coordinate delta;
                 //calculate delta by the direction of the road
-                if(direction==1) {
+                if (direction == 1) {
                     delta = new ChessBoard.Coordinate(dx[road], dy[road]);
-                }else{
+                } else {
                     delta = new ChessBoard.Coordinate(-dx[road], -dy[road]);
                 }
                 ChessBoard.Coordinate backupCoordinate = latestCoordinate;
@@ -111,25 +111,25 @@ public abstract class AbstractGameController {
                 System.out.println("delta: " + delta);
 
                 backupCoordinate = backupCoordinate.Add(delta);
-                while(!chessBoard.IsNotAbleToQuery(backupCoordinate)&&count<5){
+                while (!chessBoard.IsNotAbleToQuery(backupCoordinate) && count < 5) {
                     ChessPiece backupPiece = chessBoard.GetPiece(backupCoordinate);
 
                     System.out.println("checking coordinate: " + backupCoordinate);
                     System.out.println("backupPiece: " + backupPiece.toDetailString());
 
-                    if(backupPiece!=ChessPiece.EMPTY&& backupPiece==latestPiece){
+                    if (backupPiece != ChessPiece.EMPTY && backupPiece == latestPiece) {
                         count++;
                         backupCoordinate = backupCoordinate.Add(delta);
-                    }else{
+                    } else {
                         break;
                     }
 
                     System.out.println("Success");
                 }
-                System.out.println("count: " + count);
-                if(count>=5){
-                    return latestPiece;
-                }
+            }
+            System.out.println("count: " + count);
+            if (count >= 5) {
+                return latestPiece;
             }
             System.out.println();
         }
