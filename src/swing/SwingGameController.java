@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 
 public class SwingGameController extends AbstractGameController {
-    static int gridSideLength=80;
+    static int gridSideLength=10;
 
     static int padding=10;
 
@@ -28,7 +28,7 @@ public class SwingGameController extends AbstractGameController {
     }
 
     @Override
-    public void OnGameStart() {
+    protected void OnGameStart() {
         SwingController = new SwingController(gridSideLength,padding,GetChessBoard());
         SwingController.frame.setVisible(true);
     }
@@ -38,13 +38,23 @@ public class SwingGameController extends AbstractGameController {
         SwingController.frame.repaint();
     }
 
+    private void ShowGameOverDialog(@NotNull String message){
+        JOptionPane.showMessageDialog(null,message,"Game Over",JOptionPane.INFORMATION_MESSAGE);
+    }
+
     @Override
     protected void DisplayWinner(@NotNull ChessPiece winner) {
-        if(winner==)
+        if(winner==ChessPiece.EMPTY){
+            ShowGameOverDialog("There is no winner!");
+        }else{
+            ShowGameOverDialog("Congratulations! "+winner.name()+" is the winner!");
+        }
     }
 
     @Override
     protected boolean IsAbleToRestart() {
         return false;
     }
+
+
 }

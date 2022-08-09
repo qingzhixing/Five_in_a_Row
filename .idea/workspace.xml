@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="why I cannot read icon file even it's checked by program?">
-      <change afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="bp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/SwingStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swing/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swing/SwingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
@@ -62,7 +62,7 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.GameFrameTest">
+  <component name="RunManager" selected="应用程序.SwingStarter">
     <configuration name="ConsoleStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="starter.ConsoleStarter" />
       <module name="Five in a Row" />
@@ -102,7 +102,7 @@
       <workItem from="1659458623473" duration="361000" />
       <workItem from="1659599985584" duration="1375000" />
       <workItem from="1659607529479" duration="4226000" />
-      <workItem from="1660039673194" duration="2073000" />
+      <workItem from="1660039673194" duration="4490000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659612395140</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bp">
+      <created>1660044265416</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660044265416</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +185,7 @@
     <MESSAGE value="Add Swing Interfaces" />
     <MESSAGE value="Add GameFrame&#10;need debug:checkout how to use local assets" />
     <MESSAGE value="why I cannot read icon file even it's checked by program?" />
-    <option name="LAST_COMMIT_MESSAGE" value="why I cannot read icon file even it's checked by program?" />
+    <MESSAGE value="bp" />
+    <option name="LAST_COMMIT_MESSAGE" value="bp" />
   </component>
 </project>

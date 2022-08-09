@@ -10,6 +10,4 @@ public class SwingController {
         this.frame = new GameFrame(board.GetSize(),gridSideLength,padding);
         this.frame.add(new GameComponent(gridSideLength,padding,board));
     }
-
-
 }
