@@ -1,5 +1,7 @@
 package core;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class ConsoleGameController extends AbstractGameController{
@@ -25,7 +27,7 @@ public class ConsoleGameController extends AbstractGameController{
     }
 
     @Override
-    protected void DisplayWinner(ChessPiece winner) {
+    protected void DisplayWinner(@NotNull ChessPiece winner) {
         System.out.println("----display winner----");
         if(winner == ChessPiece.EMPTY){
             System.out.println("There's no winner");
@@ -48,7 +50,7 @@ public class ConsoleGameController extends AbstractGameController{
     }
 
     @Override
-    protected void OnMove(ChessPiece player, ChessBoard.Coordinate coordinate) {
+    protected void OnMove(@NotNull ChessPiece player, ChessBoard.@NotNull Coordinate coordinate) {
 //        new Scanner(System.in).nextLine();
     }
 

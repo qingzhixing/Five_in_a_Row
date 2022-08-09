@@ -31,6 +31,7 @@ public abstract class AbstractGameController {
 
     public void Start(){
         OnGameStart();
+        DisplayBoard();
         do{
             //init
             chessBoard.Clear();
@@ -70,16 +71,16 @@ public abstract class AbstractGameController {
     protected void OnRoundStart() {
     }
 
-    protected void OnRoundEnd(ChessPiece winner) {
+    protected void OnRoundEnd(@NotNull ChessPiece winner) {
     }
 
-    protected void OnMove(ChessPiece black, ChessBoard.Coordinate lastMove) {
+    protected void OnMove(@NotNull ChessPiece black,@NotNull ChessBoard.Coordinate lastMove) {
     }
 
 
     protected abstract void DisplayBoard();
 
-    protected abstract void DisplayWinner(ChessPiece winner);
+    protected abstract void DisplayWinner(@NotNull ChessPiece winner);
 
     protected abstract boolean IsAbleToRestart();
 
