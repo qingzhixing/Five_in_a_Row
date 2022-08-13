@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="change chess board's start index to 1">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="need fix bug">
+      <change afterPath="$PROJECT_DIR$/src/core/DebugConsoleHumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starter/SwingStarter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -108,7 +110,10 @@
       <workItem from="1659458623473" duration="361000" />
       <workItem from="1659599985584" duration="1375000" />
       <workItem from="1659607529479" duration="4226000" />
-      <workItem from="1660039673194" duration="6938000" />
+      <workItem from="1660039673194" duration="7611000" />
+      <workItem from="1660401889499" duration="105000" />
+      <workItem from="1660402005064" duration="1433000" />
+      <workItem from="1660403452345" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -180,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660047907832</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="need fix bug">
+      <created>1660049379116</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660049379116</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +220,8 @@
     <MESSAGE value="bp" />
     <MESSAGE value="add paint" />
     <MESSAGE value="change chess board's start index to 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="change chess board's start index to 1" />
+    <MESSAGE value="need fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="need fix bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

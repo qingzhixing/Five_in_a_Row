@@ -2,6 +2,8 @@ package core;
 
 import org.jetbrains.annotations.NotNull;
 
+import static java.lang.Math.max;
+
 public abstract class AbstractGameController {
     protected final ChessBoard chessBoard;
     protected AbstractPlayer blackPlayer;
@@ -48,6 +50,9 @@ public abstract class AbstractGameController {
                 DisplayBoard();
                 winner = GetWinner(lastMove);
                 OnMove(ChessPiece.BLACK, lastMove);
+                if (winner != ChessPiece.EMPTY) {
+                    break;
+                }
 
                 if (chessBoard.IsFull()) break;
                 lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
@@ -94,6 +99,7 @@ public abstract class AbstractGameController {
         //search for 5 in a row by latestCoordinate
         int[] dx = {-1, -1, 0, 1};
         int[] dy = {0, 1, 1, 1};
+        int maxCount = 0;
         for (int road = 0; road < 4; road++) {
             System.out.println("road: " + road);
             int count = 1;
@@ -128,10 +134,12 @@ public abstract class AbstractGameController {
                 }
             }
             System.out.println("count: " + count);
-            if (count >= 5) {
-                return latestPiece;
-            }
+            maxCount = max(maxCount, count);
             System.out.println();
+        }
+        System.out.println("maxCount: " + maxCount);
+        if (maxCount >= 5) {
+            return latestPiece;
         }
         return ChessPiece.EMPTY;
     }
