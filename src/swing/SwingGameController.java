@@ -57,9 +57,11 @@ public class SwingGameController extends AbstractGameController {
         return option == JOptionPane.YES_OPTION;
     }
 
+/*
     @Override
     protected void OnMove(@NotNull ChessPiece player, ChessBoard.@NotNull Coordinate lastMove) {
-//        JOptionPane.showMessageDialog(null, "Player " + player.name() + " moved to " + lastMove, "Debug Message", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Player " + player.name() + " moved to " + lastMove, "Debug Message", JOptionPane.INFORMATION_MESSAGE);
     }
+*/
 
 }

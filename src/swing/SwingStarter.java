@@ -1,8 +1,7 @@
-package starter;
+package swing;
 
 import core.ChessPiece;
 import core.RandomAIPlayer;
-import swing.SwingGameController;
 
 public class SwingStarter {
     public static void main(String[] args) {

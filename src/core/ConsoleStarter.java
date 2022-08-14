@@ -1,6 +1,4 @@
-package starter;
-
-import core.ConsoleGameController;
+package core;
 
 public class ConsoleStarter {
     public static void main(String[] args) {
