@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="bug fixed">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="整理代码结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/starter/ConsoleStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ConsoleStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/starter/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

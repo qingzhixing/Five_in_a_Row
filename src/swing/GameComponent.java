@@ -5,10 +5,12 @@ import core.ChessPiece;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
 
-public class GameComponent extends JComponent {
+public class GameComponent extends JComponent implements MouseInputListener {
     static int pieceRadius = 9;
 
     int gridSideLength;
@@ -23,6 +25,9 @@ public class GameComponent extends JComponent {
         this.gridSideLength = gridSideLength;
         this.padding = padding;
         this.board = board;
+        //add mouse listeners
+        this.addMouseListener(this);
+        this.addMouseMotionListener(this);
     }
 
     @Override
@@ -94,5 +99,41 @@ public class GameComponent extends JComponent {
     private void DrawBackground() {
         bindG2d.setColor(Color.CYAN);
         bindG2d.fillRect(0, 0, getWidth(), getHeight());
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        System.out.println("mouseEntered");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        System.out.println("mouseExited");
+    }
+
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        System.out.println("mouseDragged");
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        System.out.println("mouseMoved:" + e.getX() + "," + e.getY());
     }
 }
