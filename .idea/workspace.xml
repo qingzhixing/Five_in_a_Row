@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="bp">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/AbstractGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
-    </list>
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="鼠标移动监听绘制完成" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +108,7 @@
       <workItem from="1660402005064" duration="1433000" />
       <workItem from="1660403452345" duration="2688000" />
       <workItem from="1660507295656" duration="815000" />
-      <workItem from="1660545205936" duration="3289000" />
+      <workItem from="1660545205936" duration="4035000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -213,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660548174199</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="鼠标移动监听绘制完成">
+      <created>1660549635587</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660549635587</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +246,8 @@
     <MESSAGE value="bug fixed" />
     <MESSAGE value="add mouse listeners on GameComponent.java" />
     <MESSAGE value="bp" />
-    <option name="LAST_COMMIT_MESSAGE" value="bp" />
+    <MESSAGE value="鼠标移动监听绘制完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="鼠标移动监听绘制完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
