@@ -117,7 +117,7 @@ public abstract class AbstractGameController {
                 System.out.println("delta: " + delta);
 
                 backupCoordinate = backupCoordinate.Add(delta);
-                while (!chessBoard.IsNotAbleToQuery(backupCoordinate) && count < 5) {
+                while (!chessBoard.CoordinateIsInvalid(backupCoordinate) && count < 5) {
                     ChessPiece backupPiece = chessBoard.GetPiece(backupCoordinate);
 
                     System.out.println("checking coordinate: " + backupCoordinate);

@@ -21,7 +21,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
 
     Graphics2D bindG2d;
 
-    ChessBoard.Coordinate mouseCoordinate;
+    ChessBoard.Coordinate mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
 
     public GameComponent(int gridSideLength, int padding, @NotNull ChessBoard board) {
         this.gridSideLength = gridSideLength;
@@ -38,7 +38,22 @@ public class GameComponent extends JComponent implements MouseInputListener {
         DrawBackground();
         DrawGrid();
         DrawPieces();
+        DrawMouseCoordinate();
         DebugDrawCoordinates();
+    }
+
+    private void DrawMouseCoordinate() {
+        if (mouseCoordinate == null || board.CoordinateIsInvalid(mouseCoordinate)) return;
+        final int mouseGridSizeLength = gridSideLength - 2;
+        int centerX = (mouseCoordinate.row - 1) * gridSideLength + padding + gridSideLength / 2;
+        int centerY = (mouseCoordinate.column - 1) * gridSideLength + padding + gridSideLength / 2;
+        int leftTopX = centerX - mouseGridSizeLength / 2;
+        int leftTopY = centerY - mouseGridSizeLength / 2;
+        Rectangle rectangle = new Rectangle(leftTopX, leftTopY, mouseGridSizeLength, mouseGridSizeLength);
+        bindG2d.setColor(Color.BLUE);
+        bindG2d.draw(rectangle);
+        mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
+        System.out.println("DrawMouseCoordinate() called");
     }
 
     private void DebugDrawCoordinates() {
@@ -104,13 +119,18 @@ public class GameComponent extends JComponent implements MouseInputListener {
     }
 
     private @NotNull ChessBoard.Coordinate MousePositionToGridCoordinate(int x, int y) {
+        if (MousePositionIsInvalid(x, y)) {
+            return new ChessBoard.Coordinate(-1, -1);
+        }
         int coordinateX = (x - padding) / gridSideLength + 1;
         int coordinateY = (y - padding) / gridSideLength + 1;
         return new ChessBoard.Coordinate(coordinateX, coordinateY);
     }
 
-    private boolean MousePositionIsValid(int x, int y) {
-        return x >= padding && x <= getWidth() - padding && y >= padding && y <= getHeight() - padding;
+    private boolean MousePositionIsInvalid(int x, int y) {
+        int boardSize = board.GetSize();
+        return x < padding || x > boardSize * gridSideLength + padding ||
+                y < padding || y > boardSize * gridSideLength + padding;
     }
 
     @Override
@@ -147,8 +167,9 @@ public class GameComponent extends JComponent implements MouseInputListener {
     @Override
     public void mouseMoved(MouseEvent e) {
         System.out.println("mouseMoved:" + e.getX() + "," + e.getY());
-        System.out.println("Grid Coordinate:" + MousePositionToGridCoordinate(e.getX(), e.getY()));
-        System.out.println(MousePositionIsValid(e.getX(), e.getY()));
+        mouseCoordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
+        System.out.println("Grid Coordinate:" + mouseCoordinate);
         System.out.println("getWidth:" + getWidth() + ", " + "getHeight:" + getHeight());
+        repaint();
     }
 }
