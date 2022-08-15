@@ -35,6 +35,12 @@ public class SwingGameController extends AbstractGameController {
     protected void OnGameStart() {
         SwingController = new SwingController(gridSideLength, padding, GetChessBoard());
         SwingController.frame.setVisible(true);
+        if (blackPlayer instanceof UIHumanPlayer) {
+            ((UIHumanPlayer) blackPlayer).BindMouseClickedList(SwingController.component.mouseClicked);
+        }
+        if (whitePlayer instanceof UIHumanPlayer) {
+            ((UIHumanPlayer) whitePlayer).BindMouseClickedList(SwingController.component.mouseClicked);
+        }
     }
 
     @Override

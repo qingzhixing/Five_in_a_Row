@@ -4,7 +4,12 @@ import core.AbstractPlayer;
 import core.ChessBoard;
 import core.ChessPiece;
 
-public class UIHumanPlayer extends AbstractPlayer{
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicReference;
+
+public class UIHumanPlayer extends AbstractPlayer {
+    private ArrayList<ChessBoard.Coordinate> bindMouseClicked;
+
     protected UIHumanPlayer(String name, ChessPiece ownPiece) {
         super(name, ownPiece);
     }
@@ -13,8 +18,25 @@ public class UIHumanPlayer extends AbstractPlayer{
         super(ownPiece);
     }
 
+    public void BindMouseClickedList(ArrayList<ChessBoard.Coordinate> bindMouseClicked) {
+        this.bindMouseClicked = bindMouseClicked;
+    }
+
     @Override
     public ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate counterpartyLastMove) {
-        return null;
+        if (bindMouseClicked == null) {
+            return null;
+        }
+        bindMouseClicked.clear();
+        AtomicReference<ChessBoard.Coordinate> move = new AtomicReference<>();
+        while (move.get() == null) {
+            bindMouseClicked.forEach(coordinate -> {
+                if (!board.IsNotAbleToPlaceAnyPiece(coordinate)) {
+                    move.set(coordinate);
+                }
+            });
+        }
+        System.out.println("MoveIn() called:" + move.get());
+        return move.get();
     }
 }

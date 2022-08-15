@@ -9,19 +9,16 @@ import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
+import java.util.ArrayList;
 
 public class GameComponent extends JComponent implements MouseInputListener {
-    static int pieceRadius = 9;
-
-    int gridSideLength;
-
-    int padding;
-
-    ChessBoard board;
-
-    Graphics2D bindG2d;
-
-    ChessBoard.Coordinate mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
+    private static final int pieceRadius = 9;
+    public final ArrayList<ChessBoard.Coordinate> mouseClicked = new ArrayList<>();
+    private final int gridSideLength;
+    private final int padding;
+    private final ChessBoard board;
+    private Graphics2D bindG2d;
+    private ChessBoard.Coordinate mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
 
     public GameComponent(int gridSideLength, int padding, @NotNull ChessBoard board) {
         this.gridSideLength = gridSideLength;
@@ -53,7 +50,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
         bindG2d.setColor(Color.BLUE);
         bindG2d.draw(rectangle);
         mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
-        System.out.println("DrawMouseCoordinate() called");
+//        System.out.println("DrawMouseCoordinate() called");
     }
 
     private void DebugDrawCoordinates() {
@@ -135,7 +132,12 @@ public class GameComponent extends JComponent implements MouseInputListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        ChessBoard.Coordinate coordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
+        System.out.println("mouse clicked:" + coordinate);
+        if (board.CoordinateIsInvalid(coordinate)) {
+            return;
+        }
+        mouseClicked.add(coordinate);
     }
 
     @Override
@@ -166,10 +168,12 @@ public class GameComponent extends JComponent implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        System.out.println("mouseMoved:" + e.getX() + "," + e.getY());
         mouseCoordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
+        /*
+        System.out.println("mouseMoved:" + e.getX() + "," + e.getY());
         System.out.println("Grid Coordinate:" + mouseCoordinate);
         System.out.println("getWidth:" + getWidth() + ", " + "getHeight:" + getHeight());
+        */
         repaint();
     }
 }

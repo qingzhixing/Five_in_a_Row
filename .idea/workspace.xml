@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="鼠标移动监听绘制完成" />
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="鼠标移动监听绘制完成">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +115,8 @@
       <workItem from="1660402005064" duration="1433000" />
       <workItem from="1660403452345" duration="2688000" />
       <workItem from="1660507295656" duration="815000" />
-      <workItem from="1660545205936" duration="4035000" />
+      <workItem from="1660545205936" duration="4074000" />
+      <workItem from="1660558820624" duration="2789000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -215,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660549635587</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="鼠标移动监听绘制完成">
+      <created>1660554361293</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1660554361293</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
