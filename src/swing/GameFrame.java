@@ -1,8 +1,6 @@
 package swing;
 
 import javax.swing.*;
-import java.io.IOException;
-import java.util.Objects;
 
 public class GameFrame extends JFrame {
 
@@ -11,10 +9,9 @@ public class GameFrame extends JFrame {
      */
     public GameFrame(int boardSize, int gridSideLength, int padding) {
         int length = gridSideLength * boardSize + padding * 2;
-        setSize(length, length+50);
+        setSize(length, length + 50);
         setResizable(false);
         setTitle("Five in a Row Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 }

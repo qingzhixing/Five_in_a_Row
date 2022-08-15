@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="整理代码结构">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="add mouse listeners on GameComponent.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
@@ -111,6 +112,7 @@
       <workItem from="1660402005064" duration="1433000" />
       <workItem from="1660403452345" duration="2688000" />
       <workItem from="1660507295656" duration="815000" />
+      <workItem from="1660545205936" duration="1871000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -196,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660405866061</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add mouse listeners on GameComponent.java">
+      <created>1660509647891</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660509647891</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +235,8 @@
     <MESSAGE value="change chess board's start index to 1" />
     <MESSAGE value="need fix bug" />
     <MESSAGE value="bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
+    <MESSAGE value="add mouse listeners on GameComponent.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mouse listeners on GameComponent.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
