@@ -4,40 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="complete UIHumanPlayer.java">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Five in a Row.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Five in a Row.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/chess.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chess.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/AbstractGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/AbstractPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/AbstractPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ConsoleGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ConsoleGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ConsoleStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ConsoleStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DebugConsoleHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/DebugConsoleHumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/FoolAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/FoolAIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/RandomAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/RandomAIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/UIHumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ChessBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qingzhixing/core/ChessBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/GameFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qingzhixing/core/GameFrameTest.java" afterDir="false" />
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="添加Maven">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +162,7 @@
       <workItem from="1660545205936" duration="4074000" />
       <workItem from="1660558820624" duration="4174000" />
       <workItem from="1660698654342" duration="210000" />
-      <workItem from="1661541167787" duration="925000" />
+      <workItem from="1661541167787" duration="1003000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -315,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660561721390</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="添加Maven">
+      <created>1661542124141</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661542124141</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +323,8 @@
     <MESSAGE value="bp" />
     <MESSAGE value="鼠标移动监听绘制完成" />
     <MESSAGE value="complete UIHumanPlayer.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete UIHumanPlayer.java" />
+    <MESSAGE value="添加Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加Maven" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
