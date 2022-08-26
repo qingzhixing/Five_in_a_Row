@@ -1,7 +1,7 @@
-package swing;
+package qingzhixing.core.swing;
 
-import core.ChessBoard;
 import org.jetbrains.annotations.NotNull;
+import qingzhixing.core.console.ChessBoard;
 
 public class SwingController {
     GameFrame frame;

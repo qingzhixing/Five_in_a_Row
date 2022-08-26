@@ -1,10 +1,10 @@
-package core;
+package qingzhixing.core.console;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
-public class FoolAIPlayer extends AbstractPlayer{
+public class FoolAIPlayer extends AbstractPlayer {
 
     FoolAIPlayer(String name, ChessPiece ownPiece) {
         super(name, ownPiece);
@@ -19,13 +19,13 @@ public class FoolAIPlayer extends AbstractPlayer{
         /*
             永远在对手左上方左上方放置棋子，否则随机放置
          */
-        if(counterpartyLastMove == null){
-            counterpartyLastMove = new ChessBoard.Coordinate(-1,-1);
+        if (counterpartyLastMove == null) {
+            counterpartyLastMove = new ChessBoard.Coordinate(-1, -1);
         }
         ChessBoard.Coordinate coordinate = counterpartyLastMove.Subtract(new ChessBoard.Coordinate(1, 1));
-        while(board.IsNotAbleToPlaceAnyPiece(coordinate)){
-            int newRaw=new Random().nextInt(board.GetSize());
-            int newCol=new Random().nextInt(board.GetSize());
+        while (board.IsNotAbleToPlaceAnyPiece(coordinate)) {
+            int newRaw = new Random().nextInt(board.GetSize());
+            int newCol = new Random().nextInt(board.GetSize());
             coordinate = new ChessBoard.Coordinate(newRaw, newCol);
         }
         return coordinate;

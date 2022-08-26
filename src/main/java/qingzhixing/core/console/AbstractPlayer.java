@@ -1,4 +1,4 @@
-package core;
+package qingzhixing.core.console;
 
 public abstract class AbstractPlayer {
     public final ChessPiece ownPiece;
@@ -14,5 +14,5 @@ public abstract class AbstractPlayer {
         this("Unnamed core.Player", ownPiece);
     }
 
-    public abstract ChessBoard.Coordinate MoveIn(ChessBoard board,ChessBoard.Coordinate counterpartyLastMove);
+    public abstract ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate counterpartyLastMove);
 }

@@ -1,4 +1,4 @@
-package core;
+package qingzhixing.core.console;
 
 public class RandomAIPlayer extends AbstractPlayer {
     public RandomAIPlayer(ChessPiece piece) {
@@ -12,7 +12,7 @@ public class RandomAIPlayer extends AbstractPlayer {
     @Override
     public ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate lastMove) {
         ChessBoard.Coordinate randomCoordinate = board.GetRandomCoordinate();
-        while(board.IsNotAbleToPlaceAnyPiece(randomCoordinate)){
+        while (board.IsNotAbleToPlaceAnyPiece(randomCoordinate)) {
             randomCoordinate = board.GetRandomCoordinate();
         }
         return randomCoordinate;

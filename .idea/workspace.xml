@@ -4,13 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="鼠标移动监听绘制完成">
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="complete UIHumanPlayer.java">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/GameComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/SwingStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Five in a Row.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Five in a Row.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chess.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/AbstractGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/AbstractGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/AbstractPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/AbstractPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ChessPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ConsoleGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ConsoleGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ConsoleStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/ConsoleStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DebugConsoleHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/DebugConsoleHumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/FoolAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/FoolAIPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/RandomAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/console/RandomAIPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/SwingStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/SwingStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swing/UIHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/UIHumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ChessBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qingzhixing/core/ChessBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/GameFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qingzhixing/core/GameFrameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +60,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
@@ -44,33 +78,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/java/qingzhixing/core" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/swing" />
-      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.SwingStarter">
+  <component name="RunManager" selected="JUnit.ChessBoardTest">
     <configuration name="ConsoleStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="core.ConsoleStarter" />
       <module name="Five in a Row" />
@@ -92,11 +132,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="qingzhixing.core.swing.SwingStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.swing.SwingStarter" />
+      <module name="Five in a Row" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qingzhixing.core.swing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Five in a Row" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qingzhixing.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qingzhixing.core" />
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.ChessBoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.ChessBoardTest" />
       <item itemvalue="应用程序.GameFrameTest" />
       <item itemvalue="应用程序.ConsoleStarter" />
       <item itemvalue="应用程序.SwingStarter" />
+      <item itemvalue="应用程序.qingzhixing.core.swing.SwingStarter" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ChessBoardTest" />
+        <item itemvalue="应用程序.qingzhixing.core.swing.SwingStarter" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -116,7 +192,9 @@
       <workItem from="1660403452345" duration="2688000" />
       <workItem from="1660507295656" duration="815000" />
       <workItem from="1660545205936" duration="4074000" />
-      <workItem from="1660558820624" duration="2789000" />
+      <workItem from="1660558820624" duration="4174000" />
+      <workItem from="1660698654342" duration="210000" />
+      <workItem from="1661541167787" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -230,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660554361293</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="complete UIHumanPlayer.java">
+      <created>1660561721390</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1660561721390</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,10 +347,16 @@
     <MESSAGE value="add mouse listeners on GameComponent.java" />
     <MESSAGE value="bp" />
     <MESSAGE value="鼠标移动监听绘制完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="鼠标移动监听绘制完成" />
+    <MESSAGE value="complete UIHumanPlayer.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete UIHumanPlayer.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Five_in_a_Row$ChessBoardTest.ic" NAME="ChessBoardTest 覆盖结果" MODIFIED="1661542062205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>qingzhixing.core.*</FILTER>
+    </SUITE>
   </component>
 </project>

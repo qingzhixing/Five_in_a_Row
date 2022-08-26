@@ -1,8 +1,8 @@
-package swing;
+package qingzhixing.core.swing;
 
-import core.ChessBoard;
-import core.ChessPiece;
 import org.jetbrains.annotations.NotNull;
+import qingzhixing.core.console.ChessBoard;
+import qingzhixing.core.console.ChessPiece;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;

@@ -1,10 +1,10 @@
-package swing;
+package qingzhixing.core.swing;
 
-import core.AbstractGameController;
-import core.AbstractPlayer;
-import core.ChessBoard;
-import core.ChessPiece;
 import org.jetbrains.annotations.NotNull;
+import qingzhixing.core.console.AbstractGameController;
+import qingzhixing.core.console.AbstractPlayer;
+import qingzhixing.core.console.ChessBoard;
+import qingzhixing.core.console.ChessPiece;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package core;
+package qingzhixing.core.console;
 
 public class ConsoleStarter {
     public static void main(String[] args) {

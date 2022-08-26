@@ -1,22 +1,24 @@
-package core;
+package qingzhixing.core.console;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
-public class ConsoleGameController extends AbstractGameController{
+public class ConsoleGameController extends AbstractGameController {
 
-    public ConsoleGameController(int boardSize,AbstractPlayer blackPlayer,AbstractPlayer whitePlayer){
-        super(boardSize,blackPlayer,whitePlayer);
+    public ConsoleGameController(int boardSize, AbstractPlayer blackPlayer, AbstractPlayer whitePlayer) {
+        super(boardSize, blackPlayer, whitePlayer);
     }
-    public ConsoleGameController(){
+
+    public ConsoleGameController() {
         super();
     }
-    public ConsoleGameController(ChessBoard board){
+
+    public ConsoleGameController(ChessBoard board) {
         super(board);
     }
 
-    public ConsoleGameController(int boardSize){
+    public ConsoleGameController(int boardSize) {
         super(boardSize);
     }
 
@@ -29,21 +31,21 @@ public class ConsoleGameController extends AbstractGameController{
     @Override
     protected void DisplayWinner(@NotNull ChessPiece winner) {
         System.out.println("----display winner----");
-        if(winner == ChessPiece.EMPTY){
+        if (winner == ChessPiece.EMPTY) {
             System.out.println("There's no winner");
-        }else{
+        } else {
             System.out.println("Winner is " + winner.name());
         }
     }
 
     @Override
-    protected boolean IsAbleToRestart(){
-        boolean isAbleToRestart=false;
+    protected boolean IsAbleToRestart() {
+        boolean isAbleToRestart = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to restart?(y/n)");
-        if(scanner.hasNext()){
+        if (scanner.hasNext()) {
             String input = scanner.next();
-            isAbleToRestart= input.equals("y");
+            isAbleToRestart = input.equals("y");
         }
 
         return isAbleToRestart;
@@ -55,7 +57,7 @@ public class ConsoleGameController extends AbstractGameController{
     }
 
     @Override
-    protected void OnGameEnd(){
+    protected void OnGameEnd() {
         System.out.println("----OnGameEnd----");
     }
 }

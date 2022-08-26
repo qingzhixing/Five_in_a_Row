@@ -1,8 +1,8 @@
-package swing;
+package qingzhixing.core.swing;
 
-import core.AbstractPlayer;
-import core.ChessBoard;
-import core.ChessPiece;
+import qingzhixing.core.console.AbstractPlayer;
+import qingzhixing.core.console.ChessBoard;
+import qingzhixing.core.console.ChessPiece;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;

@@ -1,6 +1,6 @@
-package swing;
+package qingzhixing.core.swing;
 
-import core.ChessPiece;
+import qingzhixing.core.console.ChessPiece;
 
 public class SwingStarter {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package core;
+package qingzhixing.core.console;
 
 import java.util.Scanner;
 

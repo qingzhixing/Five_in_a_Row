@@ -1,4 +1,4 @@
-package swing;
+package qingzhixing.core.swing;
 
 import javax.swing.*;
 
