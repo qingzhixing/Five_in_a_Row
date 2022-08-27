@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="添加Maven">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9efdb945-a02a-438d-b3c1-879fceaf0c0f" name="变更" comment="修改.gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/chess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Five in a Row.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Five in a Row.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qingzhixing/core/swing/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qingzhixing/core/GameFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qingzhixing/core/GameFrameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -23,6 +31,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -53,13 +62,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
+    "last_opened_file_path": "/Users/qingzhixing/Documents/Project/Git/Five_in_a_Row/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   },
@@ -70,6 +80,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java/qingzhixing/core" />
@@ -78,7 +92,7 @@
       <recent name="$PROJECT_DIR$/src/swing" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChessBoardTest">
+  <component name="RunManager" selected="应用程序.qingzhixing.core.GameFrameTest">
     <configuration name="ConsoleStarter" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="core.ConsoleStarter" />
       <module name="Five in a Row" />
@@ -100,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="qingzhixing.core.swing.SwingStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.swing.SwingStarter" />
+    <configuration name="qingzhixing.core.GameFrameTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.GameFrameTest" />
       <module name="Five in a Row" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="qingzhixing.core.swing.*" />
+          <option name="PATTERN" value="qingzhixing.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,17 +142,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameFrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Five in a Row" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qingzhixing.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qingzhixing.core" />
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.GameFrameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameFrameTest.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Five in a Row" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qingzhixing.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qingzhixing.core" />
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.GameFrameTest" />
+      <option name="METHOD_NAME" value="main" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameFrameTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Five in a Row" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="qingzhixing.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="qingzhixing.core" />
+      <option name="MAIN_CLASS_NAME" value="qingzhixing.core.GameFrameTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.GameFrameTest.main" />
       <item itemvalue="JUnit.ChessBoardTest" />
+      <item itemvalue="JUnit.GameFrameTest" />
+      <item itemvalue="JUnit.GameFrameTest.test" />
       <item itemvalue="应用程序.GameFrameTest" />
       <item itemvalue="应用程序.ConsoleStarter" />
       <item itemvalue="应用程序.SwingStarter" />
-      <item itemvalue="应用程序.qingzhixing.core.swing.SwingStarter" />
+      <item itemvalue="应用程序.qingzhixing.core.GameFrameTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.qingzhixing.core.GameFrameTest" />
+        <item itemvalue="JUnit.GameFrameTest.main" />
+        <item itemvalue="JUnit.GameFrameTest.test" />
+        <item itemvalue="JUnit.GameFrameTest" />
         <item itemvalue="JUnit.ChessBoardTest" />
-        <item itemvalue="应用程序.qingzhixing.core.swing.SwingStarter" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +229,8 @@
       <workItem from="1660545205936" duration="4074000" />
       <workItem from="1660558820624" duration="4174000" />
       <workItem from="1660698654342" duration="210000" />
-      <workItem from="1661541167787" duration="1003000" />
+      <workItem from="1661541167787" duration="1444000" />
+      <workItem from="1661584255208" duration="2036000" />
     </task>
     <task id="LOCAL-00001" summary="ConsoleGameController">
       <created>1659438985521</created>
@@ -290,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661542124141</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修改.gitignore">
+      <created>1661542263764</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661542263764</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,13 +399,20 @@
     <MESSAGE value="鼠标移动监听绘制完成" />
     <MESSAGE value="complete UIHumanPlayer.java" />
     <MESSAGE value="添加Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加Maven" />
+    <MESSAGE value="修改.gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改.gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Five_in_a_Row$GameFrameTest_test.ic" NAME="GameFrameTest.test 覆盖结果" MODIFIED="1661542484260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>qingzhixing.core.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Five_in_a_Row$GameFrameTest.ic" NAME="GameFrameTest 覆盖结果" MODIFIED="1661542464916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>qingzhixing.core.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Five_in_a_Row$ChessBoardTest.ic" NAME="ChessBoardTest 覆盖结果" MODIFIED="1661542062205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>qingzhixing.core.*</FILTER>
     </SUITE>
