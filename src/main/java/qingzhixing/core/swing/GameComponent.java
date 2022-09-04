@@ -1,5 +1,6 @@
 package qingzhixing.core.swing;
 
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import qingzhixing.core.console.ChessBoard;
 import qingzhixing.core.console.ChessPiece;
@@ -12,6 +13,7 @@ import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 
 public class GameComponent extends JComponent implements MouseInputListener {
+    private static final Logger logger = Logger.getLogger(GameComponent.class);
     private static final int pieceRadius = 9;
     public final ArrayList<ChessBoard.Coordinate> mouseClicked = new ArrayList<>();
     private final int gridSideLength;
@@ -133,7 +135,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         ChessBoard.Coordinate coordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
-        System.out.println("mouse clicked:" + coordinate);
+        logger.debug("mouse clicked:" + coordinate);
         if (board.CoordinateIsInvalid(coordinate)) {
             return;
         }
@@ -152,18 +154,18 @@ public class GameComponent extends JComponent implements MouseInputListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        System.out.println("mouseEntered");
+        logger.debug("mouseEntered");
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        System.out.println("mouseExited");
+        logger.debug("mouseExited");
     }
 
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        System.out.println("mouseDragged");
+        logger.debug("mouseDragged");
     }
 
     @Override

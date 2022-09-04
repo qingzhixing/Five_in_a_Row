@@ -1,10 +1,13 @@
 package qingzhixing.core.console;
 
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import static java.lang.Math.max;
 
 public abstract class AbstractGameController {
+
+    private static final Logger logger = Logger.getLogger(AbstractGameController.class);
     protected final ChessBoard chessBoard;
     protected AbstractPlayer blackPlayer;
     protected AbstractPlayer whitePlayer;
@@ -89,11 +92,10 @@ public abstract class AbstractGameController {
 
     protected abstract boolean IsAbleToRestart();
 
-    //TODO:Check whether the algorithm is correct
     public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate) {
-        System.out.println("----debug get winner----");
-        System.out.println("latestCoordinate: " + latestCoordinate);
-        System.out.println("lastPiece:" + chessBoard.GetPiece(latestCoordinate).toDetailString());
+        logger.debug("GetWinner");
+        logger.debug("latestCoordinate: " + latestCoordinate);
+        logger.debug("lastPiece:" + chessBoard.GetPiece(latestCoordinate).toDetailString());
 
         ChessPiece latestPiece = chessBoard.GetPiece(latestCoordinate);
         //search for 5 in a row by latestCoordinate
@@ -101,10 +103,10 @@ public abstract class AbstractGameController {
         int[] dy = {0, 1, 1, 1};
         int maxCount = 0;
         for (int road = 0; road < 4; road++) {
-            System.out.println("road: " + road);
+            logger.debug("road: " + road);
             int count = 1;
             for (int direction = 1; direction <= 2; direction++) {
-                System.out.println("direction: " + direction);
+                logger.debug("direction: " + direction);
                 ChessBoard.Coordinate delta;
                 //calculate delta by the direction of the road
                 if (direction == 1) {
@@ -114,14 +116,14 @@ public abstract class AbstractGameController {
                 }
                 ChessBoard.Coordinate backupCoordinate = latestCoordinate;
 
-                System.out.println("delta: " + delta);
+                logger.debug("delta: " + delta);
 
                 backupCoordinate = backupCoordinate.Add(delta);
                 while (!chessBoard.CoordinateIsInvalid(backupCoordinate) && count < 5) {
                     ChessPiece backupPiece = chessBoard.GetPiece(backupCoordinate);
 
-                    System.out.println("checking coordinate: " + backupCoordinate);
-                    System.out.println("backupPiece: " + backupPiece.toDetailString());
+                    logger.debug("checking coordinate: " + backupCoordinate);
+                    logger.debug("backupPiece: " + backupPiece.toDetailString());
 
                     if (backupPiece != ChessPiece.EMPTY && backupPiece == latestPiece) {
                         count++;
@@ -130,14 +132,13 @@ public abstract class AbstractGameController {
                         break;
                     }
 
-                    System.out.println("Success");
+                    logger.debug("Success");
                 }
             }
-            System.out.println("count: " + count);
+            logger.debug("count: " + count + '\n');
             maxCount = max(maxCount, count);
-            System.out.println();
         }
-        System.out.println("maxCount: " + maxCount);
+        logger.debug("maxCount: " + maxCount);
         if (maxCount >= 5) {
             return latestPiece;
         }

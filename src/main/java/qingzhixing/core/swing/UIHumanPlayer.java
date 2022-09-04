@@ -1,5 +1,6 @@
 package qingzhixing.core.swing;
 
+import org.apache.log4j.Logger;
 import qingzhixing.core.console.AbstractPlayer;
 import qingzhixing.core.console.ChessBoard;
 import qingzhixing.core.console.ChessPiece;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class UIHumanPlayer extends AbstractPlayer {
+    private static final Logger logger = Logger.getLogger(UIHumanPlayer.class);
     private ArrayList<ChessBoard.Coordinate> bindMouseClicked;
 
     protected UIHumanPlayer(String name, ChessPiece ownPiece) {
@@ -36,7 +38,7 @@ public class UIHumanPlayer extends AbstractPlayer {
                 }
             });
         }
-        System.out.println("MoveIn() called:" + move.get());
+        logger.debug("MoveIn() called:" + move.get());
         return move.get();
     }
 }

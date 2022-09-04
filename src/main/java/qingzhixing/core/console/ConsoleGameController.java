@@ -1,10 +1,12 @@
 package qingzhixing.core.console;
 
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
 public class ConsoleGameController extends AbstractGameController {
+    private static final Logger logger = Logger.getLogger(ConsoleGameController.class);
 
     public ConsoleGameController(int boardSize, AbstractPlayer blackPlayer, AbstractPlayer whitePlayer) {
         super(boardSize, blackPlayer, whitePlayer);
@@ -24,13 +26,13 @@ public class ConsoleGameController extends AbstractGameController {
 
     @Override
     protected void DisplayBoard() {
-        System.out.println("----display board----");
+        logger.debug("----display board----");
         chessBoard.DebugPrintOnConsole();
     }
 
     @Override
     protected void DisplayWinner(@NotNull ChessPiece winner) {
-        System.out.println("----display winner----");
+        logger.debug("----display winner----");
         if (winner == ChessPiece.EMPTY) {
             System.out.println("There's no winner");
         } else {
@@ -58,6 +60,6 @@ public class ConsoleGameController extends AbstractGameController {
 
     @Override
     protected void OnGameEnd() {
-        System.out.println("----OnGameEnd----");
+        logger.info("----OnGameEnd----");
     }
 }

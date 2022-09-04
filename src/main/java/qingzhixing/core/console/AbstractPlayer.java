@@ -11,7 +11,7 @@ public abstract class AbstractPlayer {
     }
 
     protected AbstractPlayer(ChessPiece ownPiece) {
-        this("Unnamed core.Player", ownPiece);
+        this("Unnamed Player", ownPiece);
     }
 
     public abstract ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate counterpartyLastMove);

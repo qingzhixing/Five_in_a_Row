@@ -1,10 +1,12 @@
 package qingzhixing.core.console;
 
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
 public class ChessBoard {
+    private static final Logger logger = Logger.getLogger(ChessBoard.class);
     private int size;
     private int colorChessAmount;
     private ChessPiece[][] board;
@@ -61,13 +63,13 @@ public class ChessBoard {
     }
 
     public void SetPiece(@NotNull Coordinate coordinate, @NotNull ChessPiece piece) {
-        System.out.print("SetPiece,colorChessAmount turn from " + colorChessAmount);
+        logger.debug("SetPiece,colorChessAmount turn from " + colorChessAmount);
         if (board[coordinate.row][coordinate.column] == ChessPiece.EMPTY) {
             colorChessAmount += ((piece == ChessPiece.EMPTY) ? 0 : 1);
         } else {
             colorChessAmount += ((piece == ChessPiece.EMPTY) ? -1 : 0);
         }
-        System.out.println(" to " + colorChessAmount);
+        logger.debug(" to " + colorChessAmount);
         board[coordinate.row][coordinate.column] = piece;
     }
 
