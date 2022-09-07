@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import qingzhixing.core.console.ChessBoard;
 import qingzhixing.core.console.ChessPiece;
+import qingzhixing.core.console.Coordinate;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
@@ -15,12 +16,12 @@ import java.util.ArrayList;
 public class GameComponent extends JComponent implements MouseInputListener {
     private static final Logger logger = Logger.getLogger(GameComponent.class);
     private static final int pieceRadius = 9;
-    public final ArrayList<ChessBoard.Coordinate> mouseClicked = new ArrayList<>();
+    public final ArrayList<Coordinate> mouseClicked = new ArrayList<>();
     private final int gridSideLength;
     private final int padding;
     private final ChessBoard board;
     private Graphics2D bindG2d;
-    private ChessBoard.Coordinate mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
+    private Coordinate mouseCoordinate = new Coordinate(-1, -1);
 
     public GameComponent(int gridSideLength, int padding, @NotNull ChessBoard board) {
         this.gridSideLength = gridSideLength;
@@ -51,7 +52,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
         Rectangle rectangle = new Rectangle(leftTopX, leftTopY, mouseGridSizeLength, mouseGridSizeLength);
         bindG2d.setColor(Color.BLUE);
         bindG2d.draw(rectangle);
-        mouseCoordinate = new ChessBoard.Coordinate(-1, -1);
+        mouseCoordinate = new Coordinate(-1, -1);
 //        System.out.println("DrawMouseCoordinate() called");
     }
 
@@ -77,7 +78,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
         int boardSize = board.GetSize();
         for (int i = 1; i <= boardSize; i++) {
             for (int j = 1; j <= boardSize; j++) {
-                ChessPiece piece = board.GetPiece(new ChessBoard.Coordinate(i, j));
+                ChessPiece piece = board.GetPiece(new Coordinate(i, j));
                 if (piece != ChessPiece.EMPTY) {
                     DrawPiece(piece, i, j);
                 }
@@ -117,13 +118,13 @@ public class GameComponent extends JComponent implements MouseInputListener {
         bindG2d.fillRect(0, 0, getWidth(), getHeight());
     }
 
-    private @NotNull ChessBoard.Coordinate MousePositionToGridCoordinate(int x, int y) {
+    private @NotNull Coordinate MousePositionToGridCoordinate(int x, int y) {
         if (MousePositionIsInvalid(x, y)) {
-            return new ChessBoard.Coordinate(-1, -1);
+            return new Coordinate(-1, -1);
         }
         int coordinateX = (x - padding) / gridSideLength + 1;
         int coordinateY = (y - padding) / gridSideLength + 1;
-        return new ChessBoard.Coordinate(coordinateX, coordinateY);
+        return new Coordinate(coordinateX, coordinateY);
     }
 
     private boolean MousePositionIsInvalid(int x, int y) {
@@ -134,7 +135,7 @@ public class GameComponent extends JComponent implements MouseInputListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        ChessBoard.Coordinate coordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
+        Coordinate coordinate = MousePositionToGridCoordinate(e.getX(), e.getY());
         logger.debug("mouse clicked:" + coordinate);
         if (board.CoordinateIsInvalid(coordinate)) {
             return;

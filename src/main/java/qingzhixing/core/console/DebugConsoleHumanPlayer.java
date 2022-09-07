@@ -12,13 +12,13 @@ public class DebugConsoleHumanPlayer extends AbstractPlayer {
     }
 
     @Override
-    public ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate counterpartyLastMove) {
+    public Coordinate MoveIn(ChessBoard board, Coordinate counterpartyLastMove) {
         System.out.println("Enter your move: ");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextInt()) {
             int x = scanner.nextInt();
             int y = scanner.nextInt();
-            return new ChessBoard.Coordinate(x, y);
+            return new Coordinate(x, y);
         }
         return null;
     }

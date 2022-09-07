@@ -43,11 +43,11 @@ public abstract class AbstractGameController {
 
             OnRoundStart();
 
-            ChessBoard.Coordinate lastMove = null;
+            Coordinate lastMove = null;
             ChessPiece winner = ChessPiece.EMPTY;
             while (winner == ChessPiece.EMPTY) {
 
-                if (chessBoard.IsFull()) break;
+                if (chessBoard.BoardIsFull()) break;
                 lastMove = blackPlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.BLACK);
                 DisplayBoard();
@@ -57,7 +57,7 @@ public abstract class AbstractGameController {
                     break;
                 }
 
-                if (chessBoard.IsFull()) break;
+                if (chessBoard.BoardIsFull()) break;
                 lastMove = whitePlayer.MoveIn(chessBoard, lastMove);
                 chessBoard.PlacePiece(lastMove, ChessPiece.WHITE);
                 DisplayBoard();
@@ -82,7 +82,7 @@ public abstract class AbstractGameController {
     protected void OnRoundEnd(@NotNull ChessPiece winner) {
     }
 
-    protected void OnMove(@NotNull ChessPiece black, @NotNull ChessBoard.Coordinate lastMove) {
+    protected void OnMove(@NotNull ChessPiece black, @NotNull Coordinate lastMove) {
     }
 
 
@@ -92,7 +92,7 @@ public abstract class AbstractGameController {
 
     protected abstract boolean IsAbleToRestart();
 
-    public final ChessPiece GetWinner(@NotNull ChessBoard.Coordinate latestCoordinate) {
+    public final ChessPiece GetWinner(@NotNull Coordinate latestCoordinate) {
         logger.debug("GetWinner");
         logger.debug("latestCoordinate: " + latestCoordinate);
         logger.debug("lastPiece:" + chessBoard.GetPiece(latestCoordinate).toDetailString());
@@ -107,14 +107,14 @@ public abstract class AbstractGameController {
             int count = 1;
             for (int direction = 1; direction <= 2; direction++) {
                 logger.debug("direction: " + direction);
-                ChessBoard.Coordinate delta;
+                Coordinate delta;
                 //calculate delta by the direction of the road
                 if (direction == 1) {
-                    delta = new ChessBoard.Coordinate(dx[road], dy[road]);
+                    delta = new Coordinate(dx[road], dy[road]);
                 } else {
-                    delta = new ChessBoard.Coordinate(-dx[road], -dy[road]);
+                    delta = new Coordinate(-dx[road], -dy[road]);
                 }
-                ChessBoard.Coordinate backupCoordinate = latestCoordinate;
+                Coordinate backupCoordinate = latestCoordinate;
 
                 logger.debug("delta: " + delta);
 

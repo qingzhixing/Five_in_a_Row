@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import qingzhixing.core.console.ChessBoard;
 import qingzhixing.core.console.ChessPiece;
+import qingzhixing.core.console.Coordinate;
 
 import java.util.Random;
 
@@ -21,7 +22,7 @@ public class ChessBoardTest {
         int randomColumn = -1;
         for (int i = 1; i <= pieceAmount; i++) {
             System.out.println("Placing Piece: " + i);
-            while (!board.PlacePiece(new ChessBoard.Coordinate(randomRaw, randomColumn), ChessPiece.RandomPiece())) {
+            while (!board.PlacePiece(new Coordinate.Coordinate(randomRaw, randomColumn), ChessPiece.RandomPiece())) {
                 randomRaw = new Random().nextInt(board.GetSize());
                 randomColumn = new Random().nextInt(board.GetSize());
                 System.out.println("Piece not placed, trying (" + randomRaw + "," + randomColumn + ")");

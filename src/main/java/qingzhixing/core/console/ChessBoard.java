@@ -51,8 +51,7 @@ public class ChessBoard {
     }
 
     /*
-        false:failed to place the piece
-        true:success to place the piece
+        @return 是否成功放置棋子
      */
     public boolean PlacePiece(@NotNull Coordinate coordinate, @NotNull ChessPiece piece) {
         if (IsNotAbleToPlaceAnyPiece(coordinate)) {
@@ -95,7 +94,7 @@ public class ChessBoard {
         return CoordinateIsInvalid(coordinate) || !IsEmptyAt(coordinate);
     }
 
-    public boolean IsFull() {
+    public boolean BoardIsFull() {
         return colorChessAmount >= size * size;
     }
 
@@ -108,30 +107,4 @@ public class ChessBoard {
         }
     }
 
-    public static class Coordinate {
-        public int row;
-        public int column;
-
-        public Coordinate(int row, int column) {
-            this.row = row;
-            this.column = column;
-        }
-
-        public boolean equals(@NotNull Coordinate c) {
-            return this.row == c.row && this.column == c.column;
-        }
-
-        public @NotNull Coordinate Add(@NotNull Coordinate other) {
-            return new Coordinate(this.row + other.row, this.column + other.column);
-        }
-
-        public @NotNull Coordinate Subtract(@NotNull Coordinate other) {
-            return new Coordinate(this.row - other.row, this.column - other.column);
-        }
-
-        @Override
-        public String toString() {
-            return "(" + row + "," + column + ")";
-        }
-    }
 }

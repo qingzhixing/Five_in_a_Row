@@ -10,8 +10,8 @@ public class RandomAIPlayer extends AbstractPlayer {
     }
 
     @Override
-    public ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate lastMove) {
-        ChessBoard.Coordinate randomCoordinate = board.GetRandomCoordinate();
+    public Coordinate MoveIn(ChessBoard board, Coordinate lastMove) {
+        Coordinate randomCoordinate = board.GetRandomCoordinate();
         while (board.IsNotAbleToPlaceAnyPiece(randomCoordinate)) {
             randomCoordinate = board.GetRandomCoordinate();
         }

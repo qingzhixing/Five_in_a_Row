@@ -4,13 +4,14 @@ import org.apache.log4j.Logger;
 import qingzhixing.core.console.AbstractPlayer;
 import qingzhixing.core.console.ChessBoard;
 import qingzhixing.core.console.ChessPiece;
+import qingzhixing.core.console.Coordinate;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class UIHumanPlayer extends AbstractPlayer {
     private static final Logger logger = Logger.getLogger(UIHumanPlayer.class);
-    private ArrayList<ChessBoard.Coordinate> bindMouseClicked;
+    private ArrayList<Coordinate.Coordinate> bindMouseClicked;
 
     protected UIHumanPlayer(String name, ChessPiece ownPiece) {
         super(name, ownPiece);
@@ -20,17 +21,17 @@ public class UIHumanPlayer extends AbstractPlayer {
         super(ownPiece);
     }
 
-    public void BindMouseClickedList(ArrayList<ChessBoard.Coordinate> bindMouseClicked) {
+    public void BindMouseClickedList(ArrayList<Coordinate.Coordinate> bindMouseClicked) {
         this.bindMouseClicked = bindMouseClicked;
     }
 
     @Override
-    public ChessBoard.Coordinate MoveIn(ChessBoard board, ChessBoard.Coordinate counterpartyLastMove) {
+    public Coordinate.Coordinate MoveIn(ChessBoard board, Coordinate.Coordinate counterpartyLastMove) {
         if (bindMouseClicked == null) {
             return null;
         }
         bindMouseClicked.clear();
-        AtomicReference<ChessBoard.Coordinate> move = new AtomicReference<>();
+        AtomicReference<Coordinate.Coordinate> move = new AtomicReference<>();
         while (move.get() == null) {
             bindMouseClicked.forEach(coordinate -> {
                 if (!board.IsNotAbleToPlaceAnyPiece(coordinate)) {

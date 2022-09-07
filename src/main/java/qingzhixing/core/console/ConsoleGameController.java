@@ -54,7 +54,7 @@ public class ConsoleGameController extends AbstractGameController {
     }
 
     @Override
-    protected void OnMove(@NotNull ChessPiece player, ChessBoard.@NotNull Coordinate coordinate) {
+    protected void OnMove(@NotNull ChessPiece player, @NotNull Coordinate coordinate) {
 //        new Scanner(System.in).nextLine();
     }
 
