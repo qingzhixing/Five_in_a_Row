@@ -82,7 +82,7 @@ public abstract class AbstractGameController {
     protected void OnRoundEnd(@NotNull ChessPiece winner) {
     }
 
-    protected void OnMove(@NotNull ChessPiece black, @NotNull Coordinate lastMove) {
+    protected void OnMove(@NotNull ChessPiece player, @NotNull Coordinate lastMove) {
     }
 
 

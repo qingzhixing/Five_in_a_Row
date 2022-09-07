@@ -34,7 +34,7 @@ public class UIHumanPlayer extends AbstractPlayer {
         AtomicReference<Coordinate> move = new AtomicReference<>();
         while (move.get() == null) {
             bindMouseClicked.forEach(coordinate -> {
-                if (!board.IsNotAbleToPlaceAnyPiece(coordinate)) {
+                if (!board.IsNotPlaceable(coordinate)) {
                     move.set(coordinate);
                 }
             });

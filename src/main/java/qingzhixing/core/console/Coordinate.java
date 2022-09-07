@@ -2,7 +2,7 @@ package qingzhixing.core.console;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Coordinate {
+public class Coordinate implements Cloneable {
     public int row;
     public int column;
 
@@ -27,5 +27,9 @@ public class Coordinate {
     public String toString() {
         return "(" + row + "," + column + ")";
     }
-
+    
+    @Override
+    public Coordinate clone() {
+        return new Coordinate(row, column);
+    }
 }

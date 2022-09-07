@@ -1,14 +1,13 @@
 package qingzhixing.core.swing;
 
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
-import qingzhixing.core.console.AbstractGameController;
-import qingzhixing.core.console.AbstractPlayer;
-import qingzhixing.core.console.ChessBoard;
-import qingzhixing.core.console.ChessPiece;
+import qingzhixing.core.console.*;
 
 import javax.swing.*;
 
 public class SwingGameController extends AbstractGameController {
+    private static final Logger logger = Logger.getLogger(SwingGameController.class);
     static int gridSideLength = 30;
 
     static int padding = 10;
@@ -63,11 +62,12 @@ public class SwingGameController extends AbstractGameController {
         return option == JOptionPane.YES_OPTION;
     }
 
-/*
+
     @Override
-    protected void OnMove(@NotNull ChessPiece player, ChessBoard.@NotNull Coordinate lastMove) {
-        JOptionPane.showMessageDialog(null, "Player " + player.name() + " moved to " + lastMove, "Debug Message", JOptionPane.INFORMATION_MESSAGE);
+    protected void OnMove(@NotNull ChessPiece player, @NotNull Coordinate lastMove) {
+//        JOptionPane.showMessageDialog(null, "Player " + player.name() + " moved to " + lastMove, "Debug Message", JOptionPane.INFORMATION_MESSAGE);
+        logger.debug("Player " + player.name() + " moved to " + lastMove);
     }
-*/
+
 
 }

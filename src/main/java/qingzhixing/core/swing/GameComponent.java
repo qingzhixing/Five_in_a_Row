@@ -40,6 +40,26 @@ public class GameComponent extends JComponent implements MouseInputListener {
         DrawPieces();
         DrawMouseCoordinate();
         DebugDrawCoordinates();
+        DebugDrawBoardValues();
+    }
+
+    private void DebugDrawBoardValues() {
+        bindG2d.setColor(Color.blue);
+        Font currentFont = bindG2d.getFont();
+        Font newFont = new Font(currentFont.getFontName(), currentFont.getStyle(), currentFont.getSize() - 3);
+        bindG2d.setFont(newFont);
+
+        int boardSize = board.GetSize();
+        long[][] value = board.GetValueArray();
+        for (int i = 1; i <= boardSize; i++) {
+            for (int j = 1; j <= boardSize; j++) {
+                float gridX = (i - 1) * gridSideLength + padding;
+                float gridY = (j - 1) * gridSideLength + padding + 0.7f * gridSideLength;
+                bindG2d.drawString(Long.toString(value[i][j]), gridX, gridY);
+            }
+        }
+
+        bindG2d.setFont(currentFont);
     }
 
     private void DrawMouseCoordinate() {

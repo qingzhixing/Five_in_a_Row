@@ -11,7 +11,7 @@ public class FoolAIPlayer extends AbstractPlayer {
     }
 
     FoolAIPlayer(ChessPiece ownPiece) {
-        super(ownPiece);
+        super((ownPiece == ChessPiece.BLACK ? "black" : "white"), ownPiece);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class FoolAIPlayer extends AbstractPlayer {
             counterpartyLastMove = new Coordinate(-1, -1);
         }
         Coordinate coordinate = counterpartyLastMove.Subtract(new Coordinate(1, 1));
-        while (board.IsNotAbleToPlaceAnyPiece(coordinate)) {
+        while (board.IsNotPlaceable(coordinate)) {
             int newRaw = new Random().nextInt(board.GetSize());
             int newCol = new Random().nextInt(board.GetSize());
             coordinate = new Coordinate(newRaw, newCol);
