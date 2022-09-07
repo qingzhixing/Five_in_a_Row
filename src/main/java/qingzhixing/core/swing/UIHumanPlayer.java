@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class UIHumanPlayer extends AbstractPlayer {
     private static final Logger logger = Logger.getLogger(UIHumanPlayer.class);
-    private ArrayList<Coordinate.Coordinate> bindMouseClicked;
+    private ArrayList<Coordinate> bindMouseClicked;
 
     protected UIHumanPlayer(String name, ChessPiece ownPiece) {
         super(name, ownPiece);
@@ -21,17 +21,17 @@ public class UIHumanPlayer extends AbstractPlayer {
         super(ownPiece);
     }
 
-    public void BindMouseClickedList(ArrayList<Coordinate.Coordinate> bindMouseClicked) {
+    public void BindMouseClickedList(ArrayList<Coordinate> bindMouseClicked) {
         this.bindMouseClicked = bindMouseClicked;
     }
 
     @Override
-    public Coordinate.Coordinate MoveIn(ChessBoard board, Coordinate.Coordinate counterpartyLastMove) {
+    public Coordinate MoveIn(ChessBoard board, Coordinate counterpartyLastMove) {
         if (bindMouseClicked == null) {
             return null;
         }
         bindMouseClicked.clear();
-        AtomicReference<Coordinate.Coordinate> move = new AtomicReference<>();
+        AtomicReference<Coordinate> move = new AtomicReference<>();
         while (move.get() == null) {
             bindMouseClicked.forEach(coordinate -> {
                 if (!board.IsNotAbleToPlaceAnyPiece(coordinate)) {
